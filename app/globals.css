@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Montserrat:wght@100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 :root {
   --background: #ffffff;
@@ -17,5 +20,27 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", Helvetica, sans-serif;
+}
+
+
+h1, h2 {
+  font-family: 'Limelight';
+}
+
+
+.cta-button {
+  margin-left: auto;
+  padding: 0.5rem 1rem;
+  background-color: #2463EB; /* Change to your brand color */
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  /* font-weight: bold; */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
 }
