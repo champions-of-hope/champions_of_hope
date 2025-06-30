@@ -1,0 +1,32 @@
+1. logo updated. ✅
+2. The Navbar is not sticky but still transparent. i'm assuming you might need some background let me know. 🤔
+3. font successfully changed ✅
+4. New single coming soon changed to "Uniting Artists and Audiences to uplift those in need" ✅
+5. Join Newsletter to "Join Mailing list"✅
+6. Background Images updated ✅
+7. UpcomingEvent is hidden now ✅
+8. About Section heading changed ✅
+9. About section paragraph changed ✅
+10. Created new layout for about Section because removing upcoming tour and address was looking very weird. ✅
+11. Changed purchase music to checkout socials ✅
+12. Need links from caleb to add to social buttons 🤔
+13. Changed Released Album to JARS ✅
+14. Changed AudioSection image ✅
+15. Changed Label and Released to "Very serious musci for not so serious people" ✅
+16. Changed Genere ✅
+17. Added names of Team members ✅
+18. added spotify instead of custom music ✅
+
+
+
+
+19. social network links are in google docs upload them and change icons based on the link 
+20. add trasition effect to navbar after 20% scrollscroll✅
+21. create join mailing list 
+22. buy tickets custom 
+23. Square payment api, Mysql
+24. backend server for payment and mailing list. 
+25. Test on different devices 
+26. In the watch section attach images and youtube videos 
+27. Make a netflix slider for images
+

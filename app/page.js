@@ -1,39 +1,24 @@
-'use client'
-import Image from "next/image";
-import Hero2 from "@/components/Hero2";
+"use client";
+
+
+import HeroSection from "@/components/HeroSection";
+import JARS from "@/components/JARS";
 import AboutSection from "@/components/AboutSection";
-// import DiscographySection from "@/components/Discography";
-import UpcomingEvent from "@/components/UpcomingEvent";
-import ContactAndFooter from "@/components/ContactSection";
-import AudioSection from "@/components/AudioFiles";
-// import PreviousEvent from "@/components/PreviousEvent";
-import TeamSection from "@/components/TeamSection";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import Spotify from "@/components/Spotify";
 
 export default function Home() {
+
   return (
     <>
-    {/* <Navbar /> */}
-    <Hero2 />
-    <UpcomingEvent />
-    {/* <PreviousEvent /> */}
-    <AboutSection />
-    {/* <DiscographySection /> */}
-    <AudioSection />
-    {/* <TeamSection /> */}
-    <ContactAndFooter /> 
-
-
+      <Navbar />
+      <HeroSection />
+      
+      <AboutSection />
+      <JARS />
+      <Spotify />
+      <Footer />
     </>
   );
 }
-
-
-/*
-
-JSX not HTML
-
-Vite or V8 javascript -> JS engline compiles the code from javascript to whatever we want 
-
-
-
-*/
