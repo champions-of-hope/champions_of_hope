@@ -1,16 +1,18 @@
 "use client";
 
+import ComingSoon from "@/components/ComingSoon";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import Gallery from "@/components/watch/Gallery_Slider";
+// import Gallery from "@/components/watch/Gallery_Slider";
 import React from "react";
 
 const Watch = () => {
   return (
     <div>
       <Navbar />
+      <ComingSoon />
 
-      <div className="py-[100px]">
+      {/* <div className="py-[100px]">
 
       <Gallery
         name="Show 1"
@@ -57,7 +59,7 @@ const Watch = () => {
   { src: "https://images.unsplash.com/photo-1519750783820-4b87c2018b34", alt: "Aerial view of coastline" },
   { src: "https://images.unsplash.com/photo-1485470733090-0aae3a9a0990", alt: "Lake with mountain reflection" }
 ]}/>
-      </div>
+      </div> */}
 
       <Footer />
     </div>

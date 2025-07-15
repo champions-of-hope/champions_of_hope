@@ -3,7 +3,7 @@ import React from "react";
 const Spotify = () => {
   return (
     <>
-      <div className="w-full max-w-4xl mx-auto my-8">
+      <div className="  w-full max-w-4xl mx-auto my-8">
         <div className="relative rounded-xl overflow-hidden shadow-lg bg-black/80">
           <iframe
             style={{ borderRadius: "12px" }}

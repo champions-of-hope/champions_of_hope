@@ -5,13 +5,20 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import React from "react";
 
+import Jars from "@/components/team/Jars";
+import Spotify from "@/components/Spotify";
+import CoreValues from "@/components/about/coreValues";
+
 const About = () => {
   return (
     <div>
       <Navbar />
+      <MissionStatement />
+      <CoreValues />
       <OurStory />
       <OurTimeline />
-      <MissionStatement />
+      <Jars />
+      <Spotify />
       <Footer />
     </div>
   );

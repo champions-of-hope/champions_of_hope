@@ -1,13 +1,21 @@
-import React from 'react'
+import React from 'react';
 
 const MissionStatement = () => {
   return (
-    <div>
-        <h3 className='text-4xl font-bold text-center mb-12'>Mission Statement</h3>
-        <p className='lg:px-[80px]'>Champions of Hope aims to build communities of artists and audience members who work towards changing our world by harnessing the power of art towards important charitable work. We strive to challenge the stigma that meaningful work shouldn't be well-compensated, especially in the arts & fundraising industries. By showcasing the power of music to inspire change, the initiative raises funds for critical causes while advocating for fair wages in meaningful and impactful work.
-</p>
-    </div>
-  )
-}
+    <section className="pt-32 py-16 px-4 sm:px-6 lg:px-8 bg-black">
+      <div className="max-w-4xl mx-auto text-center">
+        <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 relative">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+            Mission Statement
+          </span>
+          <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-600 rounded-full"></span>
+        </h3>
+        <p className="text-lg sm:text-xl lg:text-2xl text-gray-200 leading-relaxed px-4 sm:px-8 lg:px-16 transition-all duration-500 hover:text-white">
+          Champions of Hope ignites change through art, unity, and the fight for fair pay.
+        </p>
+      </div>
+    </section>
+  );
+};
 
-export default MissionStatement
+export default MissionStatement;

@@ -2,7 +2,7 @@ import React from 'react'
 import TeamMembers from '../../components/team/CoreTeam'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import Jars from '@/components/team/Jars'
+// import Jars from '@/components/team/Jars'
 
 const page = () => {
   return (
@@ -11,7 +11,7 @@ const page = () => {
       <br />
       <br />
         <TeamMembers />
-        <Jars />
+        {/* <Jars /> */}
 
 
         <Footer />

@@ -1,4 +1,43 @@
+'use client'
 import Image from 'next/image';
+
+
+import Link from "next/link";
+import { FaSpotify, FaApple, FaInstagram, FaTiktok, FaYoutube, FaEnvelope } from "react-icons/fa";
+
+const socialPlatforms = [
+  {
+    href: "https://open.spotify.com/artist/1g3tps1FqLNflYsQ1bheZo?si=UKsJ_55IS5-USdVVwqjLiQ",
+    icon: <FaSpotify className="text-2xl" />,
+    label: "Spotify",
+  },
+  {
+    href: "https://music.apple.com/ca/artist/jars/1743693655",
+    icon: <FaApple className="text-2xl" />,
+    label: "Apple Music",
+  },
+  {
+    href: "https://instagram.com/jars.band",
+    icon: <FaInstagram className="text-2xl" />,
+    label: "Instagram",
+  },
+  {
+    href: "https://tiktok.com/@jars.band1",
+    icon: <FaTiktok className="text-2xl" />,
+    label: "TikTok",
+  },
+  {
+    href: "https://www.youtube.com/@JARS.band1",
+    icon: <FaYoutube className="text-2xl" />,
+    label: "YouTube",
+  },
+  {
+    href: "mailto:jars.band604@gmail.com",
+    icon: <FaEnvelope className="text-2xl" />,
+    label: "Email",
+  },
+];
+
 
 export default function Jars() {
   return (
@@ -14,12 +53,24 @@ export default function Jars() {
             />
           </div>
           <div className="text-white">
-            <h2 className="text-3xl font-bold mb-4">JARS</h2>
+            <h2 className="text-3xl font-bold mb-4">The Band Behind the Mission</h2>
             <p className="text-lg leading-relaxed">
-              John Doe is the lead guitarist of the band, bringing electrifying riffs and soulful solos to the stage. 
-              With over a decade of experience, John has toured internationally, blending classic rock with modern flair. 
-              When not shredding on his guitar, he enjoys songwriting and mentoring young musicians.
+              JARS is a collaborative project based in Vancouver, BC, consisting of Jimmy (Frontman/Rhythm guitarist), Shamus (Bass,) Rayne (Drums) and Caleb (Lead Guitar).  We curate music using the vast array of tastes from each member. We like to call ourselves a Shoegaze Folk band, but we leave our music up for the audience to decide. Our music is guided by the principles of playfulness, experimentation with roots in traditional folk music. But don't trust us, listen for yourself!
             </p>
+            {/* Socials */}
+            <ul className="flex justify-center space-x-4 mt-4">
+        {socialPlatforms.map((platform, index) => (
+          <li key={index}>
+            <Link
+              href={platform.href}
+              className="text-white hover:text-gray-400 transition-colors"
+              aria-label={`Visit us on ${platform.label}`}
+            >
+              {platform.icon}
+            </Link>
+          </li>
+        ))}
+      </ul>
           </div>
         </div>
       </div>

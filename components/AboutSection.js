@@ -3,9 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  FaApple,
-  FaSoundcloud,
-  FaSpotify,
+  FaLinkedin,
+  FaTiktok,
+  FaFacebook,
   FaYoutube,
   FaInstagram,
 } from "react-icons/fa";
@@ -14,30 +14,30 @@ export default function AboutSection() {
   // Array of music platforms with their respective icons and links
   const musicPlatforms = [
     {
-      href: "https://music.apple.com/us/artist/jars/1743693655",
-      icon: <FaApple className="text-2xl" />,
-      label: "Apple",
+      href: "https://www.linkedin.com/company/106714301",
+      icon: <FaLinkedin className="text-2xl" />,
+      label: "Linkedin",
+    },
+    {
+      href: "https://www.tiktok.com/@champions.of.hope.series",
+      icon: <FaTiktok className="text-2xl" />,
+      label: "Tiktok",
+    },
+    {
+      href: "https://www.facebook.com/profile.php?id=61577283400098&sk=about",
+      icon: <FaFacebook className="text-2xl" />,
+      label: "Facebook",
     },
 
+    {
+      href: "https://www.youtube.com/@champions.of.hope.series",
+      icon: <FaYoutube className="text-2xl" />,
+      label: "YouTube",
+    },
     {
       href: "https://www.instagram.com/champions.of.hope/",
       icon: <FaInstagram className="text-2xl" />,
       label: "Instagram",
-    },
-    {
-      href: "https://soundcloud.com/jarsband/tracks",
-      icon: <FaSoundcloud className="text-2xl" />,
-      label: "SoundCloud",
-    },
-    {
-      href: "https://open.spotify.com/artist/1g3tps1FqLNflYsQ1bheZo",
-      icon: <FaSpotify className="text-2xl" />,
-      label: "Spotify",
-    },
-    {
-      href: "https://www.youtube.com/@JARS.band1/videos",
-      icon: <FaYoutube className="text-2xl" />,
-      label: "YouTube",
     },
   ];
 

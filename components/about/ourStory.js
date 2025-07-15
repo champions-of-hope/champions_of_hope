@@ -7,7 +7,7 @@ export default function OurStory() {
         <h2 className="text-4xl font-bold text-center mb-12">Our Story</h2>
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="md:w-1/2">
-            <p className="text-lg leading-relaxed">
+            <p className="text-lg leading-relaxed md:text-left text-center">
               “Champions of Hope started as someone planning a show for their
               friends. It quickly blossomed into a realization that bands and
               artists have considerable barriers when wanting to support

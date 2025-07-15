@@ -3,41 +3,37 @@ import Image from 'next/image';
 export default function TeamMembers() {
   const team = [
     {
-      name: 'Caleb O Brien',
-      role: 'Founder & CEO',
-      description: 'Visionary leader with 15 years of industry experience driving innovation.',
-      image: '/assets/teamPage/caleb.jpg',
-    },
-    {
       name: 'Jimmy',
-      role: 'Chief Designer',
-      description: 'Creative mind crafting stunning visuals for our brand.',
+      role: 'Founder & CEO',
+      description: '',
       image: '/assets/teamPage/jimmy.jpg',
     },
     {
+      name: 'Caleb O Brien',
+      role: 'Event Coordinator',
+      description: '',
+      image: '/assets/teamPage/caleb.jpg',
+    },
+    
+    {
       name: 'Ash',
       role: 'Lead Developer',
-      description: 'Expert coder building robust and scalable solutions.',
+      description: '',
       image: '/assets/teamPage/ash.jpg',
     },
     {
-      name: 'Vaneesa',
-      role: 'Marketing Head',
-      description: 'Strategic thinker boosting our global presence.',
+      name: 'Vaneesa Armistead',
+      role: 'Event Manager',
+      description: '',
       image: '/assets/teamPage/vanessa.jpg',
     },
      {
-      name: 'Rayne',
-      role: 'Founder & CEO',
-      description: 'Visionary leader with 15 years of industry experience driving innovation.',
-      image: '/assets/teamPage/rayne.jpg',
+      name: 'Leah Mcbean-Willis',
+      role: 'Event Manager',
+      description: '',
+      image: '/assets/teamPage/Leah.jpeg',
     },
-    {
-      name: 'Shamus',
-      role: 'Chief Designer',
-      description: 'Creative mind crafting stunning visuals for our brand.',
-      image: '/assets/teamPage/shamus.jpg',
-    },
+    
     
   ];
 

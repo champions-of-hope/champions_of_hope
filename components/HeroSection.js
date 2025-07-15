@@ -4,13 +4,8 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import MailingListPopup from "@/components/MailingListPopup";
-
 const HeroSection = () => {
   const [activeSlide, setActiveSlide] = useState(1);
-
-  //joining mailing list popup
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   //  slider effect
   useEffect(() => {
@@ -52,12 +47,10 @@ const HeroSection = () => {
                 Uniting Artists and Audiences to uplift those in need
               </h4>
               <Link
-                href="#"
+                href="https://onpitch.io/championsofhope"
                 className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full transition-colors"
               >
-                <button onClick={() => setIsPopupOpen(true)}>
-                  Join Mailing List
-                </button>
+                <button>Join Mailing List</button>
               </Link>
 
               {/* Buy Tickets  */}
@@ -136,12 +129,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Mailing list pop up  */}
-      <MailingListPopup
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
-      {/* Mailing list pop up ended  */}
+    
     </section>
   );
 };
