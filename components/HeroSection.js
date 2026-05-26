@@ -4,12 +4,31 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+const heroSlides = [
+  {
+    src: "/assets/HeroSection/hero1.jpg",
+    alt: "Champions of Hope community event background",
+  },
+  {
+    src: "/assets/HeroSection/hero2.jpg",
+    alt: "Champions of Hope live event background",
+  },
+  {
+    src: "/assets/HeroSection/coh-209-hero.jpg",
+    alt: "Wide black and white Champions of Hope concert crowd and band photo",
+  },
+  {
+    src: "/gallery/coh-10-crowd.jpg",
+    alt: "Wide crowd photo from Champions of Hope 10",
+  },
+];
+
 const HeroSection = () => {
-  const [activeSlide, setActiveSlide] = useState(1);
+  const [activeSlide, setActiveSlide] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveSlide((prev) => (prev === 1 ? 2 : 1));
+      setActiveSlide((prev) => (prev + 1) % heroSlides.length);
     }, 5000);
     return () => clearInterval(interval);
   }, []);
@@ -17,32 +36,29 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen">
       <div className="relative w-full h-screen overflow-hidden">
-        {["hero1.jpg", "hero2.jpg"].map((image, index) => {
-          const slideNumber = index + 1;
-          return (
+        {heroSlides.map((slide, index) => (
+          <div
+            key={slide.src}
+            className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ${
+              activeSlide === index ? "opacity-100 z-10" : "opacity-0 z-0"
+            }`}
+          >
             <div
-              key={image}
-              className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ${
-                activeSlide === slideNumber ? "opacity-100 z-10" : "opacity-0 z-0"
-              }`}
+              className="w-full h-full bg-cover bg-center bg-no-repeat relative"
+              style={{ backgroundImage: `url('${slide.src}')` }}
             >
-              <div
-                className="w-full h-full bg-cover bg-center bg-no-repeat relative"
-                style={{ backgroundImage: `url('/assets/HeroSection/${image}')` }}
-              >
-                <div className="absolute inset-0 bg-black/70"></div>
-                <Image
-                  src={`/assets/HeroSection/${image}`}
-                  alt="Champions of Hope community event background"
-                  fill
-                  sizes="100vw"
-                  className="hidden object-cover"
-                  priority={slideNumber === 1}
-                />
-              </div>
+              <div className="absolute inset-0 bg-black/70"></div>
+              <Image
+                src={slide.src}
+                alt={slide.alt}
+                fill
+                sizes="100vw"
+                className="hidden object-cover"
+                priority={index === 0}
+              />
             </div>
-          );
-        })}
+          </div>
+        ))}
 
         <div className="absolute inset-0 z-20 flex items-center justify-center px-6 pt-24">
           <div className="mx-auto max-w-6xl text-center text-white">
@@ -79,14 +95,14 @@ const HeroSection = () => {
         </div>
 
         <div className="absolute bottom-10 left-1/2 z-30 flex -translate-x-1/2 transform space-x-2">
-          {[1, 2].map((slide) => (
+          {heroSlides.map((slide, index) => (
             <button
-              key={slide}
-              onClick={() => setActiveSlide(slide)}
+              key={slide.src}
+              onClick={() => setActiveSlide(index)}
               className={`h-3 w-3 rounded-full ${
-                activeSlide === slide ? "bg-[#FFB632]" : "bg-white/50"
+                activeSlide === index ? "bg-[#FFB632]" : "bg-white/50"
               }`}
-              aria-label={`Show slide ${slide}`}
+              aria-label={`Show slide ${index + 1}`}
             />
           ))}
         </div>
