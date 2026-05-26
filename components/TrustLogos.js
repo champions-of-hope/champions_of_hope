@@ -1,7 +1,6 @@
 "use client";
 
 const sponsors = [
-  { name: "Vancouver Aboriginal Friendship Centre Society", src: "/assets/trust/253_VAFCS_Sponsor.jpg" },
   { name: "Allteck", src: "/assets/trust/Allteck-logo_sponsor.jpg" },
   { name: "BC Insulators Union", src: "/assets/trust/bc_insulators_logo_sponsor.png" },
   { name: "EJTC", src: "/assets/trust/EJTC_sponsor.png" },
@@ -16,6 +15,7 @@ const sponsors = [
 ];
 
 const charities = [
+  { name: "Vancouver Aboriginal Friendship Centre Society", src: "/assets/trust/253_VAFCS_charity.jpg" },
   { name: "Backpack Buddies", src: "/assets/trust/BPB_charity.png" },
   { name: "CMHA North and West Vancouver", src: "/assets/trust/CMHA NWV_charity.png" },
   { name: "CMHA Vancouver-Fraser", src: "/assets/trust/cmha_vancouver-fraser_charity.png" },
