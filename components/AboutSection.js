@@ -67,20 +67,20 @@ const aboutImages = [
 const eventApplications = [
   {
     title: "Band / Artist Application",
-    description: "Want to play a Champions of Hope show? Send us your application and we’ll review the fit.",
     href: "https://forms.gle/95vM7RY89dMAGERT6",
+    buttonLabel: "Apply as Band / Artist",
     buttonClass: "bg-[#3D7AD5] text-white hover:bg-white hover:text-black",
   },
   {
     title: "Vendor Application",
-    description: "Local makers, artists, and vendors can apply to be part of future event nights.",
     href: "https://forms.gle/qxkRX8BeCK3uYdP27",
+    buttonLabel: "Apply as Vendor",
     buttonClass: "bg-[#3D7AD5] text-white hover:bg-white hover:text-black",
   },
   {
     title: "Sponsor / Community Partner Inquiry",
-    description: "For sponsors, nonprofits, and community partners who want to connect around future shows.",
     href: "https://forms.gle/oet8PHWEm2Hcixkr8",
+    buttonLabel: "Sponsor Inquiry",
     buttonClass: "bg-[#FFB632] text-black hover:bg-white",
   },
 ];
@@ -319,25 +319,19 @@ export default function AboutSection() {
               <h3 className="text-3xl font-black uppercase sm:text-4xl">
                 Apply for the right lane.
               </h3>
-              <p className="mt-4 text-lg leading-8 text-gray-200">
-                Champions of Hope is still running shows. If you’re a band, artist, vendor, sponsor, or community partner, use the links below and we’ll review the fit.
-              </p>
             </div>
 
             <div className="mt-10 grid items-stretch gap-6 md:grid-cols-3">
               {eventApplications.map((application) => (
-                <div key={application.title} className="flex h-full min-h-[340px] flex-col rounded-2xl border border-white/10 bg-black/30 p-8 md:min-h-[370px]">
+                <div key={application.title} className="flex h-full min-h-[260px] flex-col justify-between rounded-2xl border border-white/10 bg-black/30 p-8 md:min-h-[300px]">
                   <h4 className="text-xl font-black uppercase leading-tight">{application.title}</h4>
-                  <p className="mt-5 text-sm leading-7 text-gray-300">
-                    {application.description}
-                  </p>
                   <a
                     href={application.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`mt-auto inline-flex w-fit rounded-full px-6 py-3 text-sm font-bold transition ${application.buttonClass}`}
+                    className={`mt-10 inline-flex w-fit rounded-full px-6 py-3 text-sm font-bold transition ${application.buttonClass}`}
                   >
-                    Open form
+                    {application.buttonLabel}
                   </a>
                 </div>
               ))}
