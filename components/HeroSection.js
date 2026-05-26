@@ -14,12 +14,8 @@ const heroSlides = [
     alt: "Champions of Hope live event background",
   },
   {
-    src: "/assets/HeroSection/coh-209-hero.jpg",
+    src: "/gallery/COH-209.jpg",
     alt: "Wide black and white Champions of Hope concert crowd and band photo",
-  },
-  {
-    src: "/gallery/coh-10-crowd.jpg",
-    alt: "Wide crowd photo from Champions of Hope 10",
   },
 ];
 
