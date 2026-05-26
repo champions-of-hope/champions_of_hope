@@ -220,9 +220,6 @@ export default function FieldProofPage() {
             <h2 className="mx-auto max-w-3xl text-4xl font-black uppercase md:text-5xl">
               Want to ask about FieldProof?
             </h2>
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8">
-              Send a quick note and I’ll follow up. This opens your email app with my address already filled in.
-            </p>
             <a
               href="mailto:jimmy.ortiz@championsofhope.io?subject=FieldProof%20inquiry"
               className="mt-8 inline-flex rounded-full bg-[#1E1B1B] px-10 py-5 text-lg font-black uppercase tracking-wide text-white transition hover:bg-white hover:text-black"
