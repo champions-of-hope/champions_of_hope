@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -35,6 +36,36 @@ const notIncluded = [
 ];
 
 export default function FieldProofPage() {
+  const [contactForm, setContactForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    companySize: "",
+    message: "",
+  });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleContactChange = (event) => {
+    const { name, value } = event.target;
+    setContactForm((current) => ({ ...current, [name]: value }));
+  };
+
+  const handleContactSubmit = (event) => {
+    event.preventDefault();
+
+    const subject = encodeURIComponent("FieldProof inquiry");
+    const body = encodeURIComponent(
+      `Name: ${contactForm.name}\n` +
+        `Email: ${contactForm.email}\n` +
+        `Phone: ${contactForm.phone}\n` +
+        `Company size: ${contactForm.companySize}\n\n` +
+        `Message:\n${contactForm.message}`
+    );
+
+    setSubmitted(true);
+    window.location.href = `mailto:jimmy.ortiz@championsofhope.io?subject=${subject}&body=${body}`;
+  };
+
   return (
     <>
       <Navbar />
@@ -215,26 +246,90 @@ export default function FieldProofPage() {
         </section>
 
         <section className="bg-[#FFB632] px-6 py-16 text-black md:px-12">
-          <div className="mx-auto flex max-w-6xl flex-col gap-8 md:flex-row md:items-center md:justify-between">
-            <div>
-              <p className="mb-3 text-sm font-bold uppercase tracking-[0.25em]">Start with one profile</p>
-              <h2 className="max-w-3xl text-4xl font-black uppercase md:text-5xl">
-                Want to review a screened trades candidate?
-              </h2>
-            </div>
-            <div className="flex flex-col gap-3 sm:flex-row md:flex-col lg:flex-row">
-              <a
-                href="mailto:jimmy.ortiz@championsofhope.io?subject=FieldProof%20fit-check%20profile"
-                className="rounded-full bg-black px-7 py-4 text-center font-bold text-white transition hover:bg-white hover:text-black"
-              >
-                Email Jimmy
-              </a>
-              <Link
-                href="/"
-                className="rounded-full border border-black px-7 py-4 text-center font-bold transition hover:bg-black hover:text-white"
-              >
-                Back to COH
-              </Link>
+          <div className="mx-auto max-w-6xl">
+            <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+              <div>
+                <p className="mb-3 text-sm font-bold uppercase tracking-[0.25em]">For companies</p>
+                <h2 className="max-w-3xl text-4xl font-black uppercase md:text-5xl">
+                  Want to ask about FieldProof?
+                </h2>
+                <p className="mt-5 max-w-xl text-lg leading-8">
+                  Send a quick note and I’ll follow up. This form opens your email app so the message goes straight to jimmy.ortiz@championsofhope.io.
+                </p>
+              </div>
+
+              <form onSubmit={handleContactSubmit} className="rounded-3xl bg-[#1E1B1B] p-6 text-white shadow-xl md:p-8">
+                <div className="grid gap-4 md:grid-cols-2">
+                  <label className="grid gap-2 text-sm font-bold uppercase tracking-[0.16em] text-gray-300">
+                    Name
+                    <input
+                      type="text"
+                      name="name"
+                      value={contactForm.name}
+                      onChange={handleContactChange}
+                      required
+                      className="rounded-xl border border-white/10 bg-white px-4 py-3 text-base font-normal normal-case tracking-normal text-black outline-none focus:ring-2 focus:ring-[#3D7AD5]"
+                    />
+                  </label>
+                  <label className="grid gap-2 text-sm font-bold uppercase tracking-[0.16em] text-gray-300">
+                    Email
+                    <input
+                      type="email"
+                      name="email"
+                      value={contactForm.email}
+                      onChange={handleContactChange}
+                      required
+                      className="rounded-xl border border-white/10 bg-white px-4 py-3 text-base font-normal normal-case tracking-normal text-black outline-none focus:ring-2 focus:ring-[#3D7AD5]"
+                    />
+                  </label>
+                  <label className="grid gap-2 text-sm font-bold uppercase tracking-[0.16em] text-gray-300">
+                    Phone number
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={contactForm.phone}
+                      onChange={handleContactChange}
+                      className="rounded-xl border border-white/10 bg-white px-4 py-3 text-base font-normal normal-case tracking-normal text-black outline-none focus:ring-2 focus:ring-[#3D7AD5]"
+                    />
+                  </label>
+                  <label className="grid gap-2 text-sm font-bold uppercase tracking-[0.16em] text-gray-300">
+                    Company size
+                    <input
+                      type="text"
+                      name="companySize"
+                      value={contactForm.companySize}
+                      onChange={handleContactChange}
+                      placeholder="Example: 25 employees"
+                      className="rounded-xl border border-white/10 bg-white px-4 py-3 text-base font-normal normal-case tracking-normal text-black outline-none focus:ring-2 focus:ring-[#3D7AD5]"
+                    />
+                  </label>
+                </div>
+
+                <label className="mt-4 grid gap-2 text-sm font-bold uppercase tracking-[0.16em] text-gray-300">
+                  Message
+                  <textarea
+                    name="message"
+                    value={contactForm.message}
+                    onChange={handleContactChange}
+                    required
+                    rows={5}
+                    className="rounded-xl border border-white/10 bg-white px-4 py-3 text-base font-normal normal-case tracking-normal text-black outline-none focus:ring-2 focus:ring-[#3D7AD5]"
+                  />
+                </label>
+
+                <button
+                  type="submit"
+                  className="mt-6 rounded-full bg-[#3D7AD5] px-8 py-4 font-bold text-white transition hover:bg-white hover:text-black"
+                >
+                  Submit
+                </button>
+
+                {submitted && (
+                  <p className="mt-5 rounded-2xl border border-white/10 bg-white/10 p-4 font-semibold text-white">
+                    Thank you for submitting. We’ll be in contact shortly.
+                  </p>
+                )}
+              </form>
             </div>
           </div>
         </section>
