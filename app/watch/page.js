@@ -26,6 +26,36 @@ const galleryImages = [
     alt: "Black and white wide shot of a Champions of Hope concert",
     caption: "Champions of Hope live",
   },
+  {
+    src: "/gallery/coh-10-art2.jpg",
+    alt: "Art vendor display at a Champions of Hope event",
+    caption: "Local art at COH 10",
+  },
+  {
+    src: "/gallery/coh-10-art3.jpg",
+    alt: "Local artwork at Champions of Hope 10",
+    caption: "Community art",
+  },
+  {
+    src: "/gallery/coh-10-art4.jpg",
+    alt: "Art table at a Champions of Hope show",
+    caption: "Artist showcase",
+  },
+  {
+    src: "/gallery/coh-10-artist.jpg",
+    alt: "Artist at Champions of Hope 10",
+    caption: "COH 10 artist moment",
+  },
+  {
+    src: "/gallery/coh-10-crowd-hand.jpg",
+    alt: "Crowd raising a hand at a Champions of Hope show",
+    caption: "Crowd energy",
+  },
+  {
+    src: "/gallery/coh-10-crowd.jpg",
+    alt: "Crowd gathered at Champions of Hope 10",
+    caption: "COH 10 crowd",
+  },
 ];
 
 const Watch = () => {
