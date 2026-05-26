@@ -63,7 +63,7 @@ const HeroSection = () => {
                 Review FieldProof
               </Link>
               <a
-                href="mailto:jimmy.ortiz@championsofhopeseries.com?subject=FieldProof%20fit-check%20profile"
+                href="mailto:jimmy.ortiz@championsofhope.io?subject=FieldProof%20fit-check%20profile"
                 className="rounded-full border border-white/40 px-7 py-4 font-bold text-white transition hover:border-white hover:bg-white/10"
               >
                 Request a Fit-Check Profile
