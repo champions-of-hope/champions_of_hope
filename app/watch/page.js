@@ -7,6 +7,21 @@ import React from "react";
 
 const galleryImages = [
   {
+    src: "/assets/HeroSection/hero1.jpg",
+    alt: "Champions of Hope hero event photo",
+    caption: "COH hero photo",
+  },
+  {
+    src: "/assets/HeroSection/hero2.jpg",
+    alt: "Champions of Hope live event hero photo",
+    caption: "COH live event",
+  },
+  {
+    src: "/gallery/COH-209.jpg",
+    alt: "Wide black and white Champions of Hope concert crowd and band photo",
+    caption: "Wide concert crowd",
+  },
+  {
     src: "/assets/AboutSection/squared1.jpg",
     alt: "Artist performing at a Champions of Hope show",
     caption: "Live performance",
