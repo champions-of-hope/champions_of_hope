@@ -11,7 +11,7 @@ const navItems = [
   { href: "/#impact", label: "Events" },
   { href: "/#about", label: "About" },
   { href: "/watch", label: "Gallery" },
-  { href: "mailto:jimmy.ortiz@championsofhopeseries.com", label: "Contact", external: true },
+  { href: "mailto:jimmy.ortiz@championsofhope.io", label: "Contact", external: true },
 ];
 
 const Navbar = () => {
