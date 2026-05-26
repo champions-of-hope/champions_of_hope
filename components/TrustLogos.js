@@ -10,27 +10,27 @@ const sponsors = [
   { name: "PML Professional Mechanical Ltd.", src: "/assets/trust/PML-logo-color_sponsor.png", href: "https://pmlbc.com/" },
   { name: "SkillPlan", src: "/assets/trust/SkillPlan_Lockup-Blue_sponsor.png", href: "https://skillplan.ca/" },
   { name: "Total Energy Systems", src: "/assets/trust/TES_Sponsor..png", href: "https://tesltd.ca/" },
-  { name: "UAPIC", src: "/assets/trust/UAPIC_sponsor.jpg", href: "https://uapicbc.ca/" },
+  { name: "UAPIC", src: "/assets/trust/UAPIC_sponsor.jpg", href: "https://uapicbc.ca/", logoClass: "max-h-36 scale-125" },
   { name: "Viking Fire Protection", src: "/assets/trust/VikingCoulEN._sponsor.png", href: "https://vikingfire.ca/" },
 ];
 
 const charities = [
-  { name: "Vancouver Aboriginal Friendship Centre Society", src: "/assets/trust/253_VAFCS_charity.jpg", href: "https://vafcs.org/" },
-  { name: "Backpack Buddies", src: "/assets/trust/BPB_charity.png", href: "https://www.backpackbuddies.ca/", featured: true, logoClass: "max-h-36 scale-125" },
-  { name: "CMHA North and West Vancouver", src: "/assets/trust/CMHA NWV_charity.png", href: "https://northwestvancouver.cmha.bc.ca/" },
-  { name: "CMHA Vancouver-Fraser", src: "/assets/trust/cmha_vancouver-fraser_charity.png", href: "https://bc.cmha.ca/cmha-vancouver-fraser-update/" },
-  { name: "Crisis Centre BC", src: "/assets/trust/crisis-centre_charity.png", href: "https://www.crisiscentre.bc.ca/" },
-  { name: "Downtown Eastside Women’s Centre", src: "/assets/trust/dewc-logo_charity.png", href: "https://dewc.ca/" },
-  { name: "Empower Through Music", src: "/assets/trust/empowermusic_charity.jpg", href: "https://empowerthroughmusic.org/" },
-  { name: "Lower Mainland Christmas Bureau", src: "/assets/trust/LMCB_Logo_vector_charity.webp", href: "https://www.lmcb.ca/" },
-  { name: "Greater Vancouver Food Bank", src: "/assets/trust/vfb_charity.png", href: "https://foodbank.bc.ca/", featured: true },
-  { name: "Carnegie Housing Project", src: "/assets/trust/chp-CHARITY.webp", href: "https://www.carnegiehousingproject.ca/" },
+  { name: "Vancouver Aboriginal Friendship Centre Society", src: "/assets/trust/253_VAFCS_charity.jpg", href: "https://vafcs.org/", charity: true },
+  { name: "Backpack Buddies", src: "/assets/trust/BPB_charity.png", href: "https://www.backpackbuddies.ca/", charity: true, logoClass: "max-h-36 scale-125" },
+  { name: "CMHA North and West Vancouver", src: "/assets/trust/CMHA NWV_charity.png", href: "https://northwestvancouver.cmha.bc.ca/", charity: true },
+  { name: "CMHA Vancouver-Fraser", src: "/assets/trust/cmha_vancouver-fraser_charity.png", href: "https://bc.cmha.ca/cmha-vancouver-fraser-update/", charity: true },
+  { name: "Crisis Centre BC", src: "/assets/trust/crisis-centre_charity.png", href: "https://www.crisiscentre.bc.ca/", charity: true },
+  { name: "Downtown Eastside Women’s Centre", src: "/assets/trust/dewc-logo_charity.png", href: "https://dewc.ca/", charity: true },
+  { name: "Empower Through Music", src: "/assets/trust/empowermusic_charity.jpg", href: "https://empowerthroughmusic.org/", charity: true },
+  { name: "Lower Mainland Christmas Bureau", src: "/assets/trust/LMCB_Logo_vector_charity.webp", href: "https://www.lmcb.ca/", charity: true },
+  { name: "Greater Vancouver Food Bank", src: "/assets/trust/vfb_charity.png", href: "https://foodbank.bc.ca/", charity: true },
+  { name: "Carnegie Housing Project", src: "/assets/trust/chp-CHARITY.webp", href: "https://www.carnegiehousingproject.ca/", charity: true },
 ];
 
 function LogoCard({ logo }) {
   const imageClass = logo.logoClass
     ? `${logo.logoClass} w-full object-contain transition duration-300 group-hover:scale-[1.04]`
-    : logo.featured
+    : logo.charity
       ? "max-h-28 w-full object-contain transition duration-300 group-hover:scale-[1.04]"
       : "max-h-20 w-full object-contain transition duration-300 group-hover:scale-[1.03]";
 
