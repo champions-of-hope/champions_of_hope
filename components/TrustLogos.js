@@ -16,24 +16,28 @@ const sponsors = [
 
 const charities = [
   { name: "Vancouver Aboriginal Friendship Centre Society", src: "/assets/trust/253_VAFCS_charity.jpg" },
-  { name: "Backpack Buddies", src: "/assets/trust/BPB_charity.png" },
+  { name: "Backpack Buddies", src: "/assets/trust/BPB_charity.png", featured: true },
   { name: "CMHA North and West Vancouver", src: "/assets/trust/CMHA NWV_charity.png" },
   { name: "CMHA Vancouver-Fraser", src: "/assets/trust/cmha_vancouver-fraser_charity.png" },
   { name: "Crisis Centre BC", src: "/assets/trust/crisis-centre_charity.png" },
   { name: "Downtown Eastside Women’s Centre", src: "/assets/trust/dewc-logo_charity.png" },
   { name: "Lower Mainland Christmas Bureau", src: "/assets/trust/LMCB_Logo_vector_charity.webp" },
-  { name: "Greater Vancouver Food Bank", src: "/assets/trust/vfb_charity.png" },
+  { name: "Greater Vancouver Food Bank", src: "/assets/trust/vfb_charity.png", featured: true },
   { name: "Carnegie Housing Project", src: "/assets/trust/chp-CHARITY.webp" },
 ];
 
 function LogoCard({ logo }) {
+  const imageClass = logo.featured
+    ? "max-h-28 w-full object-contain transition duration-300 group-hover:scale-[1.04]"
+    : "max-h-20 w-full object-contain transition duration-300 group-hover:scale-[1.03]";
+
   return (
     <div className="group flex min-h-[132px] items-center justify-center rounded-3xl border border-black/10 bg-[#F8F6F0] p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
       <img
         src={logo.src}
         alt={`${logo.name} logo`}
         loading="lazy"
-        className="max-h-20 w-full object-contain transition duration-300 group-hover:scale-[1.03]"
+        className={imageClass}
         onError={(event) => {
           event.currentTarget.style.display = "none";
           const fallback = event.currentTarget.nextElementSibling;
