@@ -136,7 +136,7 @@ export default function AboutSection() {
                 Learn About FieldProof
               </Link>
               <a
-                href="mailto:jimmy.ortiz@championsofhopeseries.com?subject=FieldProof%20fit-check%20profile"
+                href="mailto:jimmy.ortiz@championsofhope.io?subject=FieldProof%20fit-check%20profile"
                 className="rounded-full border border-white/30 px-6 py-3 text-center font-bold text-white transition hover:bg-white/10"
               >
                 Request a Fit-Check Profile
@@ -318,11 +318,11 @@ export default function AboutSection() {
             </p>
             <h2 className="text-3xl font-black uppercase">Want to review a screened candidate profile?</h2>
             <p className="mt-3 text-lg text-gray-700">
-              Email Jimmy Ortiz: jimmy.ortiz@championsofhopeseries.com · 778-533-8369
+              Email Jimmy Ortiz: jimmy.ortiz@championsofhope.io · 778-533-8369
             </p>
           </div>
           <a
-            href="mailto:jimmy.ortiz@championsofhopeseries.com?subject=FieldProof%20fit-check%20profile"
+            href="mailto:jimmy.ortiz@championsofhope.io?subject=FieldProof%20fit-check%20profile"
             className="rounded-full bg-[#3D7AD5] px-7 py-4 text-center font-bold text-white transition hover:bg-black"
           >
             Request a Fit-Check Profile
