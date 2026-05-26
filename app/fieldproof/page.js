@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -31,12 +33,6 @@ const notIncluded = [
   "No promise of union intake or school admission",
   "No replacement of your internal hiring team",
 ];
-
-export const metadata = {
-  title: "FieldProof | Trades Candidate Readiness Filter",
-  description:
-    "FieldProof by Champions of Hope helps BC contractors reduce hiring waste by manually validating trades candidates before they reach hiring or intake teams.",
-};
 
 export default function FieldProofPage() {
   return (
