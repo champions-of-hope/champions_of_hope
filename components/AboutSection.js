@@ -64,6 +64,27 @@ const aboutImages = [
   },
 ];
 
+const eventApplications = [
+  {
+    title: "Band / Artist Application",
+    description: "Want to play a Champions of Hope show? Send us your application and we’ll review the fit.",
+    href: "https://forms.gle/95vM7RY89dMAGERT6",
+    buttonClass: "bg-[#FFB632] text-black hover:bg-white",
+  },
+  {
+    title: "Vendor Application",
+    description: "Local makers, artists, and vendors can apply to be part of future event nights.",
+    href: "https://forms.gle/qxkRX8BeCK3uYdP27",
+    buttonClass: "bg-[#FFB632] text-black hover:bg-white",
+  },
+  {
+    title: "Sponsor / Community Partner Inquiry",
+    description: "For sponsors, nonprofits, and community partners who want to connect around future shows.",
+    href: "https://forms.gle/oet8PHWEm2Hcixkr8",
+    buttonClass: "border border-white/30 text-white hover:bg-white hover:text-black",
+  },
+];
+
 export default function AboutSection() {
   const musicPlatforms = [
     {
@@ -289,6 +310,40 @@ export default function AboutSection() {
               View Gallery
             </Link>
           </div>
+
+          <div className="mt-14 rounded-3xl border border-white/10 bg-white/[0.04] p-6 text-left sm:p-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-[#FFB632]">
+                Want to be part of a show?
+              </p>
+              <h3 className="text-3xl font-black uppercase sm:text-4xl">
+                Apply for the right lane.
+              </h3>
+              <p className="mt-4 text-lg leading-8 text-gray-200">
+                Champions of Hope is still running shows. If you’re a band, artist, vendor, sponsor, or community partner, use the links below and we’ll review the fit.
+              </p>
+            </div>
+
+            <div className="mt-8 grid gap-4 md:grid-cols-3">
+              {eventApplications.map((application) => (
+                <div key={application.title} className="rounded-2xl border border-white/10 bg-black/30 p-6">
+                  <h4 className="text-xl font-black uppercase">{application.title}</h4>
+                  <p className="mt-3 min-h-[72px] text-sm leading-6 text-gray-300">
+                    {application.description}
+                  </p>
+                  <a
+                    href={application.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`mt-5 inline-flex rounded-full px-5 py-3 text-sm font-bold transition ${application.buttonClass}`}
+                  >
+                    Open form
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <div className="mt-8 flex justify-center">
             <div className="w-full md:w-10/12 lg:w-9/12 text-center">
               <h4 className="mb-4 text-xl font-semibold uppercase">Check out our socials</h4>
