@@ -10,8 +10,35 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 
+const proofStats = [
+  { value: "150+", label: "candidate leads" },
+  { value: "70+", label: "manually validated candidates" },
+  { value: "70+", label: "validation calls completed" },
+  { value: "13", label: "fit-check-ready profiles" },
+  { value: "$450", label: "rough paid traffic test" },
+];
+
+const partnerTypes = [
+  "Mechanical contractors",
+  "Electrical contractors",
+  "Plumbing and pipe trades contractors",
+  "Fire protection / sprinkler contractors",
+  "General contractors",
+  "Trade schools",
+  "Workforce partners",
+  "Union intake teams",
+];
+
+const notFieldProof = [
+  "Not a staffing agency",
+  "Not a temp agency",
+  "Not a raw lead vendor",
+  "Not a job guarantee",
+  "Not a replacement for internal hiring teams",
+  "Not a promise of union intake, school admission, or employment",
+];
+
 export default function AboutSection() {
-  // Array of music platforms with their respective icons and links
   const musicPlatforms = [
     {
       href: "https://www.linkedin.com/company/106714301",
@@ -28,7 +55,6 @@ export default function AboutSection() {
       icon: <FaFacebook className="text-2xl" />,
       label: "Facebook",
     },
-
     {
       href: "https://www.youtube.com/@champions.of.hope.series",
       icon: <FaYoutube className="text-2xl" />,
@@ -42,50 +68,159 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="min-h-screen  flex items-center justify-center p-6 sm:p-12">
-      <div className="container mx-auto max-w-6xl flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-        {/* Left Side - Image Grid */}
-        <div className="w-full lg:w-1/2 grid grid-cols-2 gap-4">
-          {[1, 2, 3, 4].map((index) => (
-            <div
-              key={index}
-              className="relative group overflow-hidden  shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-2xl"
-            >
-              <Image
-                src={`/assets/AboutSection/squared${index}.jpg`}
-                alt={`Gallery Image ${index}`}
-                width={400}
-                height={400}
-                className="object-cover w-full h-48 sm:h-64 lg:h-80  transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    <>
+      <section id="about" className="bg-[#1E1B1B] px-6 py-20 text-white sm:px-12">
+        <div className="container mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="grid grid-cols-2 gap-4">
+            {[1, 2, 3, 4].map((index) => (
+              <div
+                key={index}
+                className="relative group overflow-hidden rounded-2xl shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+              >
+                <Image
+                  src={`/assets/AboutSection/squared${index}.jpg`}
+                  alt={`Champions of Hope community event image ${index}`}
+                  width={400}
+                  height={400}
+                  className="h-48 w-full object-cover transition-transform duration-700 group-hover:scale-110 sm:h-64 lg:h-72"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+              </div>
+            ))}
+          </div>
+
+          <div className="space-y-6 rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl backdrop-blur-md lg:p-10">
+            <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#FFB632]">
+              What Champions of Hope is becoming
+            </p>
+            <h2 className="text-4xl font-black uppercase leading-tight sm:text-5xl">
+              We started with shows. Now we are building a trades-readiness filter.
+            </h2>
+            <p className="text-lg leading-8 text-gray-200">
+              Champions of Hope started through live events, local artists, sponsors, and community fundraising in Vancouver. That story still matters. It proves we can build trust, get people to show up, and turn attention into action.
+            </p>
+            <p className="text-lg leading-8 text-gray-200">
+              FieldProof is the next layer: a candidate-readiness filter for trades employers and workforce partners. We help teams waste less time on unready candidates by manually validating people before they reach hiring or intake teams.
+            </p>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/fieldproof"
+                className="rounded-full bg-[#FFB632] px-6 py-3 text-center font-bold text-black transition hover:bg-white"
+              >
+                Learn About FieldProof
+              </Link>
+              <a
+                href="mailto:jimmy.ortiz@championsofhopeseries.com?subject=FieldProof%20fit-check%20profile"
+                className="rounded-full border border-white/30 px-6 py-3 text-center font-bold text-white transition hover:bg-white/10"
+              >
+                Request a Fit-Check Profile
+              </a>
             </div>
-          ))}
+          </div>
         </div>
+      </section>
 
-        {/* Right Side - Text Content */}
-        <div className="w-full lg:w-1/2 flex flex-col justify-center space-y-6 p-6 lg:p-10 backdrop-blur-md  shadow-xl">
-          <h1 className="text-4xl sm:text-5xl font-extrabold bg-clip-text bg-gradient-to-r leading-tight">
-            What We're doing
-          </h1>
-          <p className="text-md sm:text-xl leading-relaxed">
-            Building strong communities of artists and audience members. Fair
-            treatment and compensation in a competitive industry. Using our
-            gifts, our skills, and our art to support those in need.
+      <section className="bg-white px-6 py-20 text-[#1E1B1B] sm:px-12">
+        <div className="container mx-auto max-w-6xl">
+          <div className="max-w-3xl">
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-[#3D7AD5]">
+              Now building FieldProof
+            </p>
+            <h2 className="text-4xl font-black uppercase leading-tight sm:text-5xl">
+              Not staffing. Not raw leads. Better signal before your team spends time.
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-gray-700">
+              We manually screen candidates before they reach hiring or intake teams — work eligibility, transportation, trade interest, hands-on experience, timeline, wage expectations, responsiveness, and readiness.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            {proofStats.map((stat) => (
+              <div key={stat.label} className="rounded-3xl border border-black/10 bg-[#F6F6F6] p-6">
+                <p className="text-4xl font-black text-[#1E1B1B]">{stat.value}</p>
+                <p className="mt-2 font-semibold text-gray-700">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-6 max-w-3xl text-sm leading-7 text-gray-600">
+            These are early numbers, not final proof. The next proof layer is buyer feedback, interviews, starts, and retention.
           </p>
+        </div>
+      </section>
 
-          <div className="flex justify-center">
+      <section className="bg-[#0f0f0f] px-6 py-20 text-white sm:px-12">
+        <div className="container mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-[#FFB632]">
+              Who this helps
+            </p>
+            <h2 className="text-3xl font-black uppercase">Built for teams that need cleaner candidate signal.</h2>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              {partnerTypes.map((type) => (
+                <div key={type} className="rounded-xl border border-white/10 bg-black/30 p-4 font-semibold">
+                  {type}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-[#3D7AD5]">
+              What FieldProof is not
+            </p>
+            <h2 className="text-3xl font-black uppercase">Clear boundaries build trust.</h2>
+            <div className="mt-6 grid gap-3">
+              {notFieldProof.map((item) => (
+                <div key={item} className="rounded-xl border border-white/10 bg-black/30 p-4 font-semibold">
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#FFB632] px-6 py-16 text-black sm:px-12">
+        <div className="container mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+          <div>
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em]">
+              Two paths. One brand.
+            </p>
+            <h2 className="text-4xl font-black uppercase leading-tight sm:text-5xl">
+              Employers go to FieldProof. Artists and community go to events.
+            </h2>
+          </div>
+          <div className="grid gap-4">
+            <Link href="/fieldproof" className="rounded-2xl bg-black p-6 font-bold text-white transition hover:bg-white hover:text-black">
+              For Employers / Workforce Partners → FieldProof
+            </Link>
+            <Link href="/#events" className="rounded-2xl border border-black p-6 font-bold transition hover:bg-black hover:text-white">
+              For Artists / Community / Shows → Champions of Hope Events
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section id="events" className="bg-[#1E1B1B] px-6 py-20 text-white sm:px-12">
+        <div className="container mx-auto max-w-6xl text-center">
+          <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-[#FFB632]">
+            Events and community origin
+          </p>
+          <h2 className="text-4xl font-black uppercase sm:text-5xl">The shows still matter.</h2>
+          <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-gray-200">
+            Champions of Hope was built through concerts, artists, sponsors, volunteers, and local causes. That community work stays part of the story — it just does not hide the business offer anymore.
+          </p>
+          <div className="mt-8 flex justify-center">
             <div className="w-full md:w-10/12 lg:w-9/12 text-center">
-              <h4 className="text-xl font-semibold uppercase mb-4">
-                Check out our Socials
-              </h4>
-              <ul className="flex justify-center space-x-4 mt-4">
-                {musicPlatforms.map((platform, index) => (
-                  <li key={index}>
+              <h4 className="mb-4 text-xl font-semibold uppercase">Check out our socials</h4>
+              <ul className="mt-4 flex justify-center space-x-4">
+                {musicPlatforms.map((platform) => (
+                  <li key={platform.label}>
                     <Link
                       href={platform.href}
-                      className="text-white hover:text-gray-400 transition-colors"
-                      aria-label={`Purchase music on ${platform.label}`}
+                      className="text-white transition-colors hover:text-[#FFB632]"
+                      aria-label={`Open ${platform.label}`}
                     >
                       {platform.icon}
                     </Link>
@@ -95,7 +230,27 @@ export default function AboutSection() {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className="bg-white px-6 py-16 text-[#1E1B1B] sm:px-12">
+        <div className="container mx-auto flex max-w-6xl flex-col gap-6 rounded-3xl border border-black/10 bg-[#F6F6F6] p-8 lg:flex-row lg:items-center lg:justify-between">
+          <div>
+            <p className="mb-2 text-sm font-bold uppercase tracking-[0.3em] text-[#3D7AD5]">
+              For contractors / workforce partners
+            </p>
+            <h2 className="text-3xl font-black uppercase">Want to review a screened candidate profile?</h2>
+            <p className="mt-3 text-lg text-gray-700">
+              Email Jimmy Ortiz: jimmy.ortiz@championsofhopeseries.com · 778-533-8369
+            </p>
+          </div>
+          <a
+            href="mailto:jimmy.ortiz@championsofhopeseries.com?subject=FieldProof%20fit-check%20profile"
+            className="rounded-full bg-[#3D7AD5] px-7 py-4 text-center font-bold text-white transition hover:bg-black"
+          >
+            Request a Fit-Check Profile
+          </a>
+        </div>
+      </section>
+    </>
   );
 }
