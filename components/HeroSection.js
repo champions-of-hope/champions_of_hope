@@ -70,7 +70,7 @@ const HeroSection = () => {
               </a>
               <Link
                 href="/#impact"
-                className="rounded-full border border-[#3D7AD5] px-7 py-4 font-bold text-white transition hover:bg-[#3D7AD5]"
+                className="rounded-full bg-[#3D7AD5] px-7 py-4 font-bold text-white transition hover:bg-white hover:text-black"
               >
                 Explore Events
               </Link>
