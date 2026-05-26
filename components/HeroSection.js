@@ -31,7 +31,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen">
-      <div className="relative w-full h-screen overflow-hidden">
+      <div className="relative h-[100svh] min-h-[760px] w-full overflow-hidden md:h-screen md:min-h-0">
         {heroSlides.map((slide, index) => (
           <div
             key={slide.src}
@@ -56,7 +56,7 @@ const HeroSection = () => {
           </div>
         ))}
 
-        <div className="absolute inset-0 z-20 flex items-center justify-center px-6 pt-24">
+        <div className="absolute inset-0 z-20 flex items-center justify-center px-6 pb-24 pt-28 md:pb-0 md:pt-24">
           <div className="mx-auto max-w-6xl text-center text-white">
             <p className="mb-4 text-sm font-bold uppercase tracking-[0.35em] text-[#FFB632]">
               Champions of Hope / FieldProof
@@ -67,22 +67,22 @@ const HeroSection = () => {
             <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-gray-200 md:text-xl">
               Champions of Hope started through live events, local artists, sponsors, and community fundraising in Vancouver. We are now building FieldProof: a trades candidate-readiness filter that helps BC contractors and workforce partners waste less time on unready applicants.
             </p>
-            <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row md:mt-9 md:gap-4">
               <Link
                 href="/fieldproof"
-                className="rounded-full bg-[#FFB632] px-7 py-4 font-bold text-black transition hover:bg-white"
+                className="w-full max-w-xs rounded-full bg-[#FFB632] px-7 py-4 text-center font-bold text-black transition hover:bg-white sm:w-auto"
               >
                 Review FieldProof
               </Link>
               <a
                 href="mailto:jimmy.ortiz@championsofhope.io?subject=FieldProof%20fit-check%20profile"
-                className="rounded-full border border-white/40 px-7 py-4 font-bold text-white transition hover:border-white hover:bg-white/10"
+                className="w-full max-w-xs rounded-full border border-white/40 px-7 py-4 text-center font-bold text-white transition hover:border-white hover:bg-white/10 sm:w-auto"
               >
                 Request a Fit-Check Profile
               </a>
               <Link
                 href="/#impact"
-                className="rounded-full bg-[#3D7AD5] px-7 py-4 font-bold text-white transition hover:bg-white hover:text-black"
+                className="w-full max-w-xs rounded-full bg-[#3D7AD5] px-7 py-4 text-center font-bold text-white transition hover:bg-white hover:text-black sm:w-auto"
               >
                 Explore Events
               </Link>
@@ -90,7 +90,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-10 left-1/2 z-30 flex -translate-x-1/2 transform space-x-2">
+        <div className="absolute bottom-10 left-1/2 z-30 hidden -translate-x-1/2 transform space-x-2 md:flex">
           {heroSlides.map((slide, index) => (
             <button
               key={slide.src}
