@@ -69,19 +69,19 @@ const eventApplications = [
     title: "Band / Artist Application",
     description: "Want to play a Champions of Hope show? Send us your application and we’ll review the fit.",
     href: "https://forms.gle/95vM7RY89dMAGERT6",
-    buttonClass: "bg-[#FFB632] text-black hover:bg-white",
+    buttonClass: "bg-[#3D7AD5] text-white hover:bg-white hover:text-black",
   },
   {
     title: "Vendor Application",
     description: "Local makers, artists, and vendors can apply to be part of future event nights.",
     href: "https://forms.gle/qxkRX8BeCK3uYdP27",
-    buttonClass: "bg-[#FFB632] text-black hover:bg-white",
+    buttonClass: "bg-[#3D7AD5] text-white hover:bg-white hover:text-black",
   },
   {
     title: "Sponsor / Community Partner Inquiry",
     description: "For sponsors, nonprofits, and community partners who want to connect around future shows.",
     href: "https://forms.gle/oet8PHWEm2Hcixkr8",
-    buttonClass: "border border-white/30 text-white hover:bg-white hover:text-black",
+    buttonClass: "bg-[#FFB632] text-black hover:bg-white",
   },
 ];
 
@@ -324,18 +324,18 @@ export default function AboutSection() {
               </p>
             </div>
 
-            <div className="mt-8 grid gap-4 md:grid-cols-3">
+            <div className="mt-8 grid items-stretch gap-4 md:grid-cols-3">
               {eventApplications.map((application) => (
-                <div key={application.title} className="rounded-2xl border border-white/10 bg-black/30 p-6">
+                <div key={application.title} className="flex h-full flex-col rounded-2xl border border-white/10 bg-black/30 p-6">
                   <h4 className="text-xl font-black uppercase">{application.title}</h4>
-                  <p className="mt-3 min-h-[72px] text-sm leading-6 text-gray-300">
+                  <p className="mt-3 text-sm leading-6 text-gray-300">
                     {application.description}
                   </p>
                   <a
                     href={application.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`mt-5 inline-flex rounded-full px-5 py-3 text-sm font-bold transition ${application.buttonClass}`}
+                    className={`mt-auto inline-flex w-fit rounded-full px-5 py-3 text-sm font-bold transition ${application.buttonClass}`}
                   >
                     Open form
                   </a>
