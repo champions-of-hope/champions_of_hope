@@ -1,39 +1,41 @@
 "use client";
 
 const sponsors = [
-  { name: "Allteck", src: "/assets/trust/Allteck-logo_sponsor.jpg" },
-  { name: "BC Insulators Union", src: "/assets/trust/bc_insulators_logo_sponsor.png" },
-  { name: "EJTC", src: "/assets/trust/EJTC_sponsor.png" },
-  { name: "LiUNA Local 1611", src: "/assets/trust/LiUna_sponsor.png" },
-  { name: "Long & McQuade", src: "/assets/trust/Long-McQuade-Logo_sponsor.webp" },
-  { name: "Modern Niagara", src: "/assets/trust/modern_niagra-logo._sponsor.svg" },
-  { name: "PML Professional Mechanical Ltd.", src: "/assets/trust/PML-logo-color_sponsor.png" },
-  { name: "SkillPlan", src: "/assets/trust/SkillPlan_Lockup-Blue_sponsor.png" },
-  { name: "Total Energy Systems", src: "/assets/trust/TES_Sponsor..png" },
-  { name: "UAPIC", src: "/assets/trust/UAPIC_sponsor.jpg" },
-  { name: "Viking Fire Protection", src: "/assets/trust/VikingCoulEN._sponsor.png" },
+  { name: "Allteck", src: "/assets/trust/Allteck-logo_sponsor.jpg", href: "https://allteck.com/" },
+  { name: "BC Insulators Union", src: "/assets/trust/bc_insulators_logo_sponsor.png", href: "https://www.insulators118.org/en" },
+  { name: "EJTC", src: "/assets/trust/EJTC_sponsor.png", href: "https://www.ejtc.org/" },
+  { name: "LiUNA Local 1611", src: "/assets/trust/LiUna_sponsor.png", href: "https://www.liuna1611.org/" },
+  { name: "Long & McQuade", src: "/assets/trust/Long-McQuade-Logo_sponsor.webp", href: "https://www.long-mcquade.com/" },
+  { name: "Modern Niagara", src: "/assets/trust/modern_niagra-logo._sponsor.svg", href: "https://modernniagara.com/locations/vancouver/" },
+  { name: "PML Professional Mechanical Ltd.", src: "/assets/trust/PML-logo-color_sponsor.png", href: "https://pmlbc.com/" },
+  { name: "SkillPlan", src: "/assets/trust/SkillPlan_Lockup-Blue_sponsor.png", href: "https://skillplan.ca/" },
+  { name: "Total Energy Systems", src: "/assets/trust/TES_Sponsor..png", href: "https://tesltd.ca/" },
+  { name: "UAPIC", src: "/assets/trust/UAPIC_sponsor.jpg", href: "https://uapicbc.ca/" },
+  { name: "Viking Fire Protection", src: "/assets/trust/VikingCoulEN._sponsor.png", href: "https://vikingfire.ca/" },
 ];
 
 const charities = [
-  { name: "Vancouver Aboriginal Friendship Centre Society", src: "/assets/trust/253_VAFCS_charity.jpg" },
-  { name: "Backpack Buddies", src: "/assets/trust/BPB_charity.png", featured: true },
-  { name: "CMHA North and West Vancouver", src: "/assets/trust/CMHA NWV_charity.png" },
-  { name: "CMHA Vancouver-Fraser", src: "/assets/trust/cmha_vancouver-fraser_charity.png" },
-  { name: "Crisis Centre BC", src: "/assets/trust/crisis-centre_charity.png" },
-  { name: "Downtown Eastside Women’s Centre", src: "/assets/trust/dewc-logo_charity.png" },
-  { name: "Empower Through Music", src: "/assets/trust/empowermusic_charity.jpg" },
-  { name: "Lower Mainland Christmas Bureau", src: "/assets/trust/LMCB_Logo_vector_charity.webp" },
-  { name: "Greater Vancouver Food Bank", src: "/assets/trust/vfb_charity.png", featured: true },
-  { name: "Carnegie Housing Project", src: "/assets/trust/chp-CHARITY.webp" },
+  { name: "Vancouver Aboriginal Friendship Centre Society", src: "/assets/trust/253_VAFCS_charity.jpg", href: "https://vafcs.org/" },
+  { name: "Backpack Buddies", src: "/assets/trust/BPB_charity.png", href: "https://www.backpackbuddies.ca/", featured: true, logoClass: "max-h-36 scale-125" },
+  { name: "CMHA North and West Vancouver", src: "/assets/trust/CMHA NWV_charity.png", href: "https://northwestvancouver.cmha.bc.ca/" },
+  { name: "CMHA Vancouver-Fraser", src: "/assets/trust/cmha_vancouver-fraser_charity.png", href: "https://bc.cmha.ca/cmha-vancouver-fraser-update/" },
+  { name: "Crisis Centre BC", src: "/assets/trust/crisis-centre_charity.png", href: "https://www.crisiscentre.bc.ca/" },
+  { name: "Downtown Eastside Women’s Centre", src: "/assets/trust/dewc-logo_charity.png", href: "https://dewc.ca/" },
+  { name: "Empower Through Music", src: "/assets/trust/empowermusic_charity.jpg", href: "https://empowerthroughmusic.org/" },
+  { name: "Lower Mainland Christmas Bureau", src: "/assets/trust/LMCB_Logo_vector_charity.webp", href: "https://www.lmcb.ca/" },
+  { name: "Greater Vancouver Food Bank", src: "/assets/trust/vfb_charity.png", href: "https://foodbank.bc.ca/", featured: true },
+  { name: "Carnegie Housing Project", src: "/assets/trust/chp-CHARITY.webp", href: "https://www.carnegiehousingproject.ca/" },
 ];
 
 function LogoCard({ logo }) {
-  const imageClass = logo.featured
-    ? "max-h-28 w-full object-contain transition duration-300 group-hover:scale-[1.04]"
-    : "max-h-20 w-full object-contain transition duration-300 group-hover:scale-[1.03]";
+  const imageClass = logo.logoClass
+    ? `${logo.logoClass} w-full object-contain transition duration-300 group-hover:scale-[1.04]`
+    : logo.featured
+      ? "max-h-28 w-full object-contain transition duration-300 group-hover:scale-[1.04]"
+      : "max-h-20 w-full object-contain transition duration-300 group-hover:scale-[1.03]";
 
-  return (
-    <div className="group flex min-h-[132px] items-center justify-center rounded-3xl border border-black/10 bg-[#F8F6F0] p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+  const innerCard = (
+    <>
       <img
         src={logo.src}
         alt={`${logo.name} logo`}
@@ -48,8 +50,26 @@ function LogoCard({ logo }) {
       <span className="hidden text-center text-sm font-bold uppercase tracking-wide text-[#1E1B1B]">
         {logo.name}
       </span>
-    </div>
+    </>
   );
+
+  const cardClass = "group flex min-h-[132px] items-center justify-center overflow-hidden rounded-3xl border border-black/10 bg-[#F8F6F0] p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#FFB632]";
+
+  if (logo.href) {
+    return (
+      <a
+        href={logo.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Visit ${logo.name} website`}
+        className={cardClass}
+      >
+        {innerCard}
+      </a>
+    );
+  }
+
+  return <div className={cardClass}>{innerCard}</div>;
 }
 
 export default function TrustLogos() {
