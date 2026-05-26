@@ -38,6 +38,13 @@ const notFieldProof = [
   "Not a promise of union intake, school admission, or employment",
 ];
 
+const lifetimeImpact = [
+  { value: "$22,250", label: "lifetime sponsor dollars raised" },
+  { value: "$4,591", label: "donated to local charities" },
+  { value: "$16,783", label: "paid to local artists" },
+  { value: "$20,324", label: "given back to charities and artists" },
+];
+
 export default function AboutSection() {
   const musicPlatforms = [
     {
@@ -198,6 +205,44 @@ export default function AboutSection() {
             <Link href="/#events" className="rounded-2xl border border-black p-6 font-bold transition hover:bg-black hover:text-white">
               For Artists / Community / Shows → Champions of Hope Events
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#141414] px-6 py-16 text-white sm:px-12">
+        <div className="container mx-auto max-w-6xl">
+          <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-3xl">
+              <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-[#FFB632]">
+                Lifetime Champions of Hope impact
+              </p>
+              <h2 className="text-3xl font-black uppercase leading-tight sm:text-4xl">
+                Built on real shows, real sponsors, and real money moved back into the community.
+              </h2>
+            </div>
+            <p className="max-w-sm text-sm leading-6 text-gray-400">
+              Hover over a card to reveal the number. On mobile, tap once. This is context — FieldProof is still the main offer.
+            </p>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {lifetimeImpact.map((item) => (
+              <button
+                key={item.label}
+                type="button"
+                className="group rounded-3xl border border-white/10 bg-white/[0.03] p-6 text-left transition hover:border-[#FFB632]/70 hover:bg-white/[0.07] focus:border-[#FFB632] focus:outline-none focus:ring-2 focus:ring-[#FFB632]/60"
+              >
+                <p className="text-sm font-bold uppercase tracking-[0.2em] text-gray-400">
+                  {item.label}
+                </p>
+                <p className="mt-5 select-none text-3xl font-black text-[#FFB632] opacity-25 blur-sm transition duration-300 group-hover:opacity-100 group-hover:blur-0 group-focus:opacity-100 group-focus:blur-0 sm:text-4xl">
+                  {item.value}
+                </p>
+                <p className="mt-3 text-xs font-semibold uppercase tracking-[0.18em] text-gray-500 group-hover:text-gray-300 group-focus:text-gray-300">
+                  Reveal impact
+                </p>
+              </button>
+            ))}
           </div>
         </div>
       </section>
