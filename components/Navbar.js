@@ -43,13 +43,14 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="w-1/3 md:w-auto">
-            <Link href="/">
+            <Link href="/" aria-label="Champions of Hope home">
               <Image
-                src="/assets/logo/official_logo.svg"
-                alt="Champions of Hope logo"
-                width={90}
-                height={25}
-                className="object-contain"
+                src="/assets/logo/fieldproof-logo-gold.png"
+                alt="Champions of Hope gold logo"
+                width={56}
+                height={56}
+                priority
+                className="h-12 w-12 object-contain md:h-14 md:w-14"
               />
             </Link>
           </div>
