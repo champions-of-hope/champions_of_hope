@@ -37,7 +37,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="mailto:Jimmy.Ortiz@championsofhopeseries.com" className="text-gray-300 hover:text-white transition-colors duration-300">
+                <Link href="mailto:jimmy.ortiz@championsofhope.io" className="text-gray-300 hover:text-white transition-colors duration-300">
                   Contact
                 </Link>
               </li>
