@@ -69,7 +69,7 @@ const HeroSection = () => {
                 Request a Fit-Check Profile
               </a>
               <Link
-                href="/#events"
+                href="/#impact"
                 className="rounded-full border border-[#3D7AD5] px-7 py-4 font-bold text-white transition hover:bg-[#3D7AD5]"
               >
                 Explore Events
