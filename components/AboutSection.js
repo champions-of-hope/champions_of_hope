@@ -80,10 +80,10 @@ const eventApplications = [
     buttonClass: "bg-[#3D7AD5] text-white hover:bg-white hover:text-black",
   },
   {
-    title: "Sponsor / Community Partner Inquiry",
-    description: "For sponsors, nonprofits, and community partners interested in working with COH.",
+    title: "Sponsorship Inquiry",
+    description: "For sponsors interested in supporting a future Champions of Hope show.",
     href: "https://forms.gle/oet8PHWEm2Hcixkr8",
-    buttonLabel: "Sponsor Inquiry",
+    buttonLabel: "Sponsorship Inquiry",
     buttonClass: "bg-[#FFB632] text-black hover:bg-white",
   },
 ];
@@ -264,7 +264,7 @@ export default function AboutSection() {
               </h2>
             </div>
             <p className="max-w-sm text-sm leading-6 text-gray-400">
-              Hover over a card to reveal the number. On mobile, tap once. This is context — FieldProof is still the main offer.
+              Hover over a card to reveal the number. On mobile, tap once.
             </p>
           </div>
 
