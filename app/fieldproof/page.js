@@ -55,7 +55,7 @@ export default function FieldProofPage() {
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a
-                href="mailto:jimmy.ortiz@championsofhopeseries.com?subject=FieldProof%20fit-check%20profile"
+                href="mailto:jimmy.ortiz@championsofhope.io?subject=FieldProof%20fit-check%20profile"
                 className="rounded-full bg-[#FFB632] px-7 py-4 text-center font-bold text-black transition hover:bg-white"
               >
                 Request a fit-check profile
@@ -201,7 +201,7 @@ export default function FieldProofPage() {
             </div>
             <div className="flex flex-col gap-3 sm:flex-row md:flex-col lg:flex-row">
               <a
-                href="mailto:jimmy.ortiz@championsofhopeseries.com?subject=FieldProof%20fit-check%20profile"
+                href="mailto:jimmy.ortiz@championsofhope.io?subject=FieldProof%20fit-check%20profile"
                 className="rounded-full bg-black px-7 py-4 text-center font-bold text-white transition hover:bg-white hover:text-black"
               >
                 Email Jimmy
