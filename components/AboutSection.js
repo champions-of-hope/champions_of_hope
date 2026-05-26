@@ -45,6 +45,25 @@ const lifetimeImpact = [
   { value: "$20,324", label: "given back to charities and artists" },
 ];
 
+const aboutImages = [
+  {
+    src: "/assets/AboutSection/squared1.jpg",
+    alt: "Artist performing at a Champions of Hope show",
+  },
+  {
+    src: "/assets/AboutSection/squared2.jpg",
+    alt: "Crowd and community at a Champions of Hope event",
+  },
+  {
+    src: "/assets/AboutSection/squared3.jpg",
+    alt: "Band performing at a Champions of Hope show",
+  },
+  {
+    src: "/gallery/coh-10-crowd-hand.jpg",
+    alt: "Crowd raising a hand at a Champions of Hope show",
+  },
+];
+
 export default function AboutSection() {
   const musicPlatforms = [
     {
@@ -79,14 +98,14 @@ export default function AboutSection() {
       <section id="about" className="scroll-mt-28 bg-[#1E1B1B] px-6 py-20 text-white sm:px-12">
         <div className="container mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="grid grid-cols-2 gap-4">
-            {[1, 2, 3, 4].map((index) => (
+            {aboutImages.map((image) => (
               <div
-                key={index}
+                key={image.src}
                 className="relative group overflow-hidden rounded-2xl shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-2xl"
               >
                 <Image
-                  src={`/assets/AboutSection/squared${index}.jpg`}
-                  alt={`Champions of Hope community event image ${index}`}
+                  src={image.src}
+                  alt={image.alt}
                   width={400}
                   height={400}
                   className="h-48 w-full object-cover transition-transform duration-700 group-hover:scale-110 sm:h-64 lg:h-72"
