@@ -324,18 +324,18 @@ export default function AboutSection() {
               </p>
             </div>
 
-            <div className="mt-8 grid items-stretch gap-4 md:grid-cols-3">
+            <div className="mt-10 grid items-stretch gap-6 md:grid-cols-3">
               {eventApplications.map((application) => (
-                <div key={application.title} className="flex h-full flex-col rounded-2xl border border-white/10 bg-black/30 p-6">
-                  <h4 className="text-xl font-black uppercase">{application.title}</h4>
-                  <p className="mt-3 text-sm leading-6 text-gray-300">
+                <div key={application.title} className="flex h-full min-h-[340px] flex-col rounded-2xl border border-white/10 bg-black/30 p-8 md:min-h-[370px]">
+                  <h4 className="text-xl font-black uppercase leading-tight">{application.title}</h4>
+                  <p className="mt-5 text-sm leading-7 text-gray-300">
                     {application.description}
                   </p>
                   <a
                     href={application.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`mt-auto inline-flex w-fit rounded-full px-5 py-3 text-sm font-bold transition ${application.buttonClass}`}
+                    className={`mt-auto inline-flex w-fit rounded-full px-6 py-3 text-sm font-bold transition ${application.buttonClass}`}
                   >
                     Open form
                   </a>
