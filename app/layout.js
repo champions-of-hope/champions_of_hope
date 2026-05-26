@@ -2,6 +2,7 @@
 // Code checked and cleaned - Ash (6 June)
 
 import "./globals.css";
+import ScrollAnimations from "@/components/ScrollAnimations";
 
 export const metadata = {
   title: "Champions of Hope",
@@ -11,7 +12,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ScrollAnimations />
+        {children}
+      </body>
     </html>
   );
 }
