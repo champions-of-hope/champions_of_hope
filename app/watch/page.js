@@ -22,11 +22,6 @@ const galleryImages = [
     caption: "Local artists",
   },
   {
-    src: "/assets/AboutSection/squared4.jpg",
-    alt: "Black and white wide shot of a Champions of Hope concert",
-    caption: "Champions of Hope live",
-  },
-  {
     src: "/gallery/coh-10-art2.jpg",
     alt: "Art vendor display at a Champions of Hope event",
     caption: "Local art at COH 10",
@@ -48,7 +43,7 @@ const galleryImages = [
   },
   {
     src: "/gallery/coh-10-crowd-hand.jpg",
-    alt: "Crowd raising a hand at a Champions of Hope show",
+    alt: "Crowd at a Champions of Hope show",
     caption: "Crowd energy",
   },
   {
