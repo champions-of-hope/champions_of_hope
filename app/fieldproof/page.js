@@ -191,6 +191,29 @@ export default function FieldProofPage() {
           </div>
         </section>
 
+        <section className="px-6 py-16 md:px-12">
+          <div className="mx-auto max-w-6xl rounded-3xl border border-white/10 bg-white/[0.04] p-8 md:p-12">
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-[#3D7AD5]">
+              For candidates
+            </p>
+            <h2 className="text-4xl font-black uppercase md:text-5xl">Interested in the trades?</h2>
+            <p className="mt-5 max-w-3xl leading-8 text-gray-200">
+              Fill out our short trades intake form. We’ll review your answers and may follow up if there is a useful next step.
+            </p>
+            <p className="mt-4 max-w-3xl text-sm leading-7 text-gray-400">
+              This is not a job application. We do not guarantee jobs, union intake, school admission, apprenticeship placements, or interviews. The form helps us understand your trade interest, timeline, experience, and readiness.
+            </p>
+            <a
+              href="https://form.typeform.com/to/wOOli4hc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex rounded-full bg-[#3D7AD5] px-7 py-4 text-center font-bold text-white transition hover:bg-white hover:text-black"
+            >
+              Start Trades Intake
+            </a>
+          </div>
+        </section>
+
         <section className="bg-[#FFB632] px-6 py-16 text-black md:px-12">
           <div className="mx-auto flex max-w-6xl flex-col gap-8 md:flex-row md:items-center md:justify-between">
             <div>
