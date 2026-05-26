@@ -8,7 +8,7 @@ import { FaBars } from "react-icons/fa";
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/fieldproof", label: "FieldProof", featured: true },
-  { href: "/#events", label: "Events" },
+  { href: "/#impact", label: "Events" },
   { href: "/#about", label: "About" },
   { href: "/watch", label: "Gallery" },
   { href: "mailto:jimmy.ortiz@championsofhopeseries.com", label: "Contact", external: true },
