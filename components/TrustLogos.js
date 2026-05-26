@@ -21,6 +21,7 @@ const charities = [
   { name: "CMHA Vancouver-Fraser", src: "/assets/trust/cmha_vancouver-fraser_charity.png" },
   { name: "Crisis Centre BC", src: "/assets/trust/crisis-centre_charity.png" },
   { name: "Downtown Eastside Women’s Centre", src: "/assets/trust/dewc-logo_charity.png" },
+  { name: "Empower Through Music", src: "/assets/trust/empowermusic_charity.jpg" },
   { name: "Lower Mainland Christmas Bureau", src: "/assets/trust/LMCB_Logo_vector_charity.webp" },
   { name: "Greater Vancouver Food Bank", src: "/assets/trust/vfb_charity.png", featured: true },
   { name: "Carnegie Housing Project", src: "/assets/trust/chp-CHARITY.webp" },
