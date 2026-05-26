@@ -1,6 +1,7 @@
 "use client";
 
 const sponsors = [
+  { name: "UAPIC", src: "/assets/trust/UAPIC_sponsor.jpg", href: "https://uapicbc.ca/", logoClass: "max-h-44 scale-110", featuredSponsor: true },
   { name: "Allteck", src: "/assets/trust/Allteck-logo_sponsor.jpg", href: "https://allteck.com/" },
   { name: "BC Insulators Union", src: "/assets/trust/bc_insulators_logo_sponsor.png", href: "https://www.insulators118.org/en" },
   { name: "EJTC", src: "/assets/trust/EJTC_sponsor.png", href: "https://www.ejtc.org/" },
@@ -10,7 +11,6 @@ const sponsors = [
   { name: "PML Professional Mechanical Ltd.", src: "/assets/trust/PML-logo-color_sponsor.png", href: "https://pmlbc.com/" },
   { name: "SkillPlan", src: "/assets/trust/SkillPlan_Lockup-Blue_sponsor.png", href: "https://skillplan.ca/" },
   { name: "Total Energy Systems", src: "/assets/trust/TES_Sponsor..png", href: "https://tesltd.ca/" },
-  { name: "UAPIC", src: "/assets/trust/UAPIC_sponsor.jpg", href: "https://uapicbc.ca/", logoClass: "max-h-36 scale-125" },
   { name: "Viking Fire Protection", src: "/assets/trust/VikingCoulEN._sponsor.png", href: "https://vikingfire.ca/" },
 ];
 
@@ -53,7 +53,9 @@ function LogoCard({ logo }) {
     </>
   );
 
-  const cardClass = "group flex min-h-[132px] items-center justify-center overflow-hidden rounded-3xl border border-black/10 bg-[#F8F6F0] p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#FFB632]";
+  const cardClass = logo.featuredSponsor
+    ? "group flex min-h-[170px] items-center justify-center overflow-hidden rounded-3xl border border-[#FFB632]/50 bg-[#F8F6F0] p-8 shadow-sm ring-1 ring-[#FFB632]/25 transition duration-300 hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#FFB632]"
+    : "group flex min-h-[132px] items-center justify-center overflow-hidden rounded-3xl border border-black/10 bg-[#F8F6F0] p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#FFB632]";
 
   if (logo.href) {
     return (
@@ -73,6 +75,8 @@ function LogoCard({ logo }) {
 }
 
 export default function TrustLogos() {
+  const [featuredSponsor, ...otherSponsors] = sponsors;
+
   return (
     <section className="bg-[#111111] px-6 py-20 text-white sm:px-12">
       <div className="container mx-auto max-w-6xl">
@@ -96,8 +100,11 @@ export default function TrustLogos() {
             </h3>
             <div className="h-px flex-1 bg-white/10" />
           </div>
+          <div className="mx-auto mb-5 max-w-2xl">
+            <LogoCard logo={featuredSponsor} />
+          </div>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {sponsors.map((logo) => (
+            {otherSponsors.map((logo) => (
               <LogoCard key={logo.name} logo={logo} />
             ))}
           </div>
