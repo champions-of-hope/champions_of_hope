@@ -76,7 +76,7 @@ export default function AboutSection() {
 
   return (
     <>
-      <section id="about" className="bg-[#1E1B1B] px-6 py-20 text-white sm:px-12">
+      <section id="about" className="scroll-mt-28 bg-[#1E1B1B] px-6 py-20 text-white sm:px-12">
         <div className="container mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="grid grid-cols-2 gap-4">
             {[1, 2, 3, 4].map((index) => (
@@ -202,14 +202,14 @@ export default function AboutSection() {
             <Link href="/fieldproof" className="rounded-2xl bg-black p-6 font-bold text-white transition hover:bg-white hover:text-black">
               For Employers / Workforce Partners → FieldProof
             </Link>
-            <Link href="/#events" className="rounded-2xl border border-black p-6 font-bold transition hover:bg-black hover:text-white">
+            <Link href="/#impact" className="rounded-2xl border border-black p-6 font-bold transition hover:bg-black hover:text-white">
               For Artists / Community / Shows → Champions of Hope Events
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="bg-[#141414] px-6 py-16 text-white sm:px-12">
+      <section id="impact" className="scroll-mt-28 bg-[#141414] px-6 py-16 text-white sm:px-12">
         <div className="container mx-auto max-w-6xl">
           <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl">
@@ -247,15 +247,29 @@ export default function AboutSection() {
         </div>
       </section>
 
-      <section id="events" className="bg-[#1E1B1B] px-6 py-20 text-white sm:px-12">
+      <section id="events" className="scroll-mt-28 bg-[#1E1B1B] px-6 py-20 text-white sm:px-12">
         <div className="container mx-auto max-w-6xl text-center">
           <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-[#FFB632]">
             Events and community origin
           </p>
           <h2 className="text-4xl font-black uppercase sm:text-5xl">The shows still matter.</h2>
           <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-gray-200">
-            Champions of Hope was built through concerts, artists, sponsors, volunteers, and local causes. That community work stays part of the story — it just does not hide the business offer anymore.
+            We are still doing shows. We are still supporting local artists, volunteers, sponsors, and causes. FieldProof is the business direction, but we are not forgetting where Champions of Hope came from. For show updates, flyers, and community posts, check our Instagram.
           </p>
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link
+              href="https://www.instagram.com/champions.of.hope/"
+              className="rounded-full bg-[#FFB632] px-7 py-4 font-bold text-black transition hover:bg-white"
+            >
+              Check Instagram for show updates
+            </Link>
+            <Link
+              href="/watch"
+              className="rounded-full border border-white/30 px-7 py-4 font-bold text-white transition hover:bg-white/10"
+            >
+              View Gallery
+            </Link>
+          </div>
           <div className="mt-8 flex justify-center">
             <div className="w-full md:w-10/12 lg:w-9/12 text-center">
               <h4 className="mb-4 text-xl font-semibold uppercase">Check out our socials</h4>
