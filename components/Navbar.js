@@ -57,9 +57,9 @@ const Navbar = () => {
         !scrolled ? "bg-transparent" : "bg-black"
       }`}
     >
-      <div className="container mx-auto px-4 py-4 md:py-3">
-        <div className="flex items-start justify-between md:items-center">
-          <div className="w-1/3 md:w-auto">
+      <div className="container mx-auto px-5 py-4 md:px-4 md:py-3">
+        <div className="flex items-center justify-between">
+          <div className="flex w-1/3 items-center md:w-auto">
             <Link href="/" aria-label="Champions of Hope home" className="inline-flex">
               <Image
                 src="/assets/logo/fieldproof-logo-gold.png"
@@ -67,7 +67,7 @@ const Navbar = () => {
                 width={64}
                 height={64}
                 priority
-                className="h-12 w-12 object-contain md:h-16 md:w-16"
+                className="h-10 w-10 object-contain md:h-16 md:w-16"
               />
             </Link>
           </div>
@@ -81,7 +81,7 @@ const Navbar = () => {
           </nav>
 
           <button
-            className="mt-2 text-white focus:outline-none md:mt-0 md:hidden"
+            className="text-white focus:outline-none md:hidden"
             aria-label="Toggle mobile menu"
             onClick={toggleMobileMenu}
           >
