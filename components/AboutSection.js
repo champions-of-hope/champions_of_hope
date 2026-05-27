@@ -254,7 +254,7 @@ export default function AboutSection() {
 
       <section id="impact" className="scroll-mt-28 bg-[#141414] px-6 py-16 text-white sm:px-12">
         <div className="container mx-auto max-w-6xl">
-          <div className="mb-8 space-y-6">
+          <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
             <div className="max-w-3xl">
               <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-[#FFB632]">
                 Lifetime Champions of Hope impact
@@ -263,7 +263,7 @@ export default function AboutSection() {
                 Built on real shows, real sponsors, and real money moved back into the community.
               </h2>
             </div>
-            <p className="mx-auto max-w-sm text-center text-sm leading-6 text-gray-400">
+            <p className="max-w-sm text-center text-sm leading-6 text-gray-400 lg:mx-0">
               Hover over a card to reveal the number. On mobile, tap once.
             </p>
           </div>
