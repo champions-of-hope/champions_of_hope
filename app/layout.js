@@ -7,17 +7,18 @@ export const metadata = {
   title: "Champions of Hope",
   description: "Serious music for not so serious people",
   metadataBase: new URL("https://championsofhope.io"),
-  manifest: "/manifest.json",
+  manifest: "/manifest.json?v=2",
   themeColor: "#1E1B1B",
   icons: {
     icon: [
-      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.svg?v=2", type: "image/svg+xml" },
+      { url: "/icon.svg?v=2", type: "image/svg+xml" },
     ],
     shortcut: [
-      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.svg?v=2", type: "image/svg+xml" },
     ],
     apple: [
-      { url: "/apple-icon.svg", type: "image/svg+xml", sizes: "180x180" },
+      { url: "/apple-icon.svg?v=2", type: "image/svg+xml", sizes: "180x180" },
     ],
   },
   openGraph: {
