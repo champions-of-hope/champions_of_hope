@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -12 152 152" width="128" height="128" role="img" aria-label="Champions of Hope spray-painted crown icon">
+  <defs>
+    <filter id="spray-edge" x="-18%" y="-18%" width="136%" height="136%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.62" numOctaves="2" seed="18" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.25" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+    </filter>
+    <filter id="aerosol" x="-24%" y="-24%" width="148%" height="148%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="28" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="0.8" xChannelSelector="R" yChannelSelector="B" result="sprayShape"/>
+      <feGaussianBlur in="sprayShape" stdDeviation="0.65" result="softSpray"/>
+      <feComponentTransfer in="softSpray" result="mist">
+        <feFuncA type="linear" slope="0.38" intercept="-0.04"/>
+      </feComponentTransfer>
+      <feMerge><feMergeNode in="mist"/></feMerge>
+    </filter>
+  </defs>
+  <g fill="none" stroke="#FFB632" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M114 7 L109 8 L103 21 L89 44 L84 40 L69 13 L67 11 L63 11 L63 18 L60 23 L59 28 L49 51 L46 50 L16 21 L15 14 L11 15 L11 31 L10 32 L8 63 L7 64 L7 80 L5 90 L5 99 L8 115 L12 122 L15 119 L27 113 L42 109 L61 109 L62 110 L70 110 L71 111 L94 114 L117 122 L120 122 L124 119 L122 113 L122 102 L121 101 L119 72 L114 75 L112 74 L118 66 L117 63 L117 48 L116 47 L117 14 L115 11 L116 9 Z" stroke-width="19" opacity="0.2" filter="url(#aerosol)"/>
+    <path d="M114 7 L109 8 L103 21 L89 44 L84 40 L69 13 L67 11 L63 11 L63 18 L60 23 L59 28 L49 51 L46 50 L16 21 L15 14 L11 15 L11 31 L10 32 L8 63 L7 64 L7 80 L5 90 L5 99 L8 115 L12 122 L15 119 L27 113 L42 109 L61 109 L62 110 L70 110 L71 111 L94 114 L117 122 L120 122 L124 119 L122 113 L122 102 L121 101 L119 72 L114 75 L112 74 L118 66 L117 63 L117 48 L116 47 L117 14 L115 11 L116 9 Z" stroke-width="13.5" opacity="0.98" filter="url(#spray-edge)"/>
+    <path d="M114 7 L109 8 L103 21 L89 44 L84 40 L69 13 L67 11 L63 11 L63 18 L60 23 L59 28 L49 51 L46 50 L16 21 L15 14 L11 15 L11 31 L10 32 L8 63 L7 64 L7 80 L5 90 L5 99 L8 115 L12 122 L15 119 L27 113 L42 109 L61 109 L62 110 L70 110 L71 111 L94 114 L117 122 L120 122 L124 119 L122 113 L122 102 L121 101 L119 72 L114 75 L112 74 L118 66 L117 63 L117 48 L116 47 L117 14 L115 11 L116 9 Z" stroke-width="4.4" opacity="0.68" stroke-dasharray="13 2 5 2 18 3 7 2"/>
+  </g>
+</svg>
