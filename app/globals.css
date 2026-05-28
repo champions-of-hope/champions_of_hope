@@ -72,3 +72,95 @@ h1, h2 , h3 {
 .cta-button:hover {
   background-color: #0056b3;
 }
+
+/* Lifetime impact number reveal: subtle one-shot sparkler burst */
+#impact button > div.relative > span {
+  display: none !important;
+}
+
+#impact button > div.relative::before,
+#impact button > div.relative::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 9999px;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.25);
+  will-change: opacity, transform;
+}
+
+#impact button > div.relative::before {
+  background: #fff7d6;
+  box-shadow:
+    0 -20px 0 0 rgba(255, 182, 50, 0.95),
+    15px -14px 0 -1px rgba(255, 247, 214, 0.85),
+    22px 0 0 0 rgba(255, 182, 50, 0.9),
+    14px 15px 0 -1px rgba(255, 247, 214, 0.75),
+    0 22px 0 0 rgba(255, 182, 50, 0.85),
+    -15px 14px 0 -1px rgba(255, 247, 214, 0.75),
+    -22px 0 0 0 rgba(255, 182, 50, 0.9),
+    -14px -15px 0 -1px rgba(255, 247, 214, 0.85);
+}
+
+#impact button > div.relative::after {
+  width: 3px;
+  height: 3px;
+  background: #ffb632;
+  box-shadow:
+    6px -30px 0 -1px rgba(255, 182, 50, 0.75),
+    27px -18px 0 -1px rgba(255, 247, 214, 0.75),
+    31px 8px 0 -1px rgba(255, 182, 50, 0.7),
+    18px 28px 0 -1px rgba(255, 247, 214, 0.7),
+    -8px 31px 0 -1px rgba(255, 182, 50, 0.7),
+    -28px 18px 0 -1px rgba(255, 247, 214, 0.75),
+    -31px -8px 0 -1px rgba(255, 182, 50, 0.75),
+    -18px -27px 0 -1px rgba(255, 247, 214, 0.75);
+}
+
+#impact button:hover > div.relative::before,
+#impact button:focus > div.relative::before,
+#impact button:active > div.relative::before {
+  animation: coh-sparkler-burst 680ms ease-out 1 forwards;
+}
+
+#impact button:hover > div.relative::after,
+#impact button:focus > div.relative::after,
+#impact button:active > div.relative::after {
+  animation: coh-sparkler-burst 760ms ease-out 80ms 1 forwards;
+}
+
+@keyframes coh-sparkler-burst {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.25) rotate(0deg);
+    filter: blur(0px);
+  }
+
+  18% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.75) rotate(8deg);
+    filter: blur(0px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.9) rotate(18deg);
+    filter: blur(1px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #impact button:hover > div.relative::before,
+  #impact button:focus > div.relative::before,
+  #impact button:active > div.relative::before,
+  #impact button:hover > div.relative::after,
+  #impact button:focus > div.relative::after,
+  #impact button:active > div.relative::after {
+    animation: none;
+  }
+}
