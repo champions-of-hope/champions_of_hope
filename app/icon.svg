@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Champions of Hope icon">
+  <rect width="64" height="64" rx="14" fill="#1E1B1B"/>
+  <circle cx="32" cy="32" r="23" fill="#FFB632"/>
+  <circle cx="32" cy="32" r="17" fill="#1E1B1B"/>
+  <path d="M32 11 L39 27 L56 29 L43 40 L47 57 L32 48 L17 57 L21 40 L8 29 L25 27 Z" fill="#FFB632"/>
+  <circle cx="32" cy="32" r="7" fill="#1E1B1B"/>
+</svg>
