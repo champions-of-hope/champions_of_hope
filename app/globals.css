@@ -98,13 +98,21 @@ h1, h2 , h3 {
   background: #fff7d6;
   box-shadow:
     0 -20px 0 0 rgba(255, 182, 50, 0.95),
+    7px -23px 0 -1px rgba(255, 247, 214, 0.8),
     15px -14px 0 -1px rgba(255, 247, 214, 0.85),
+    23px -7px 0 -1px rgba(255, 182, 50, 0.72),
     22px 0 0 0 rgba(255, 182, 50, 0.9),
+    24px 9px 0 -1px rgba(255, 247, 214, 0.72),
     14px 15px 0 -1px rgba(255, 247, 214, 0.75),
+    8px 24px 0 -1px rgba(255, 182, 50, 0.72),
     0 22px 0 0 rgba(255, 182, 50, 0.85),
+    -8px 24px 0 -1px rgba(255, 247, 214, 0.72),
     -15px 14px 0 -1px rgba(255, 247, 214, 0.75),
+    -23px 7px 0 -1px rgba(255, 182, 50, 0.72),
     -22px 0 0 0 rgba(255, 182, 50, 0.9),
-    -14px -15px 0 -1px rgba(255, 247, 214, 0.85);
+    -24px -8px 0 -1px rgba(255, 247, 214, 0.72),
+    -14px -15px 0 -1px rgba(255, 247, 214, 0.85),
+    -7px -23px 0 -1px rgba(255, 182, 50, 0.75);
 }
 
 #impact button > div.relative::after {
@@ -113,24 +121,34 @@ h1, h2 , h3 {
   background: #ffb632;
   box-shadow:
     6px -30px 0 -1px rgba(255, 182, 50, 0.75),
+    17px -29px 0 -1px rgba(255, 247, 214, 0.68),
     27px -18px 0 -1px rgba(255, 247, 214, 0.75),
+    34px -5px 0 -1px rgba(255, 182, 50, 0.65),
     31px 8px 0 -1px rgba(255, 182, 50, 0.7),
+    27px 20px 0 -1px rgba(255, 247, 214, 0.62),
     18px 28px 0 -1px rgba(255, 247, 214, 0.7),
+    4px 34px 0 -1px rgba(255, 182, 50, 0.62),
     -8px 31px 0 -1px rgba(255, 182, 50, 0.7),
+    -20px 27px 0 -1px rgba(255, 247, 214, 0.62),
     -28px 18px 0 -1px rgba(255, 247, 214, 0.75),
+    -34px 5px 0 -1px rgba(255, 182, 50, 0.65),
     -31px -8px 0 -1px rgba(255, 182, 50, 0.75),
-    -18px -27px 0 -1px rgba(255, 247, 214, 0.75);
+    -27px -20px 0 -1px rgba(255, 247, 214, 0.62),
+    -18px -27px 0 -1px rgba(255, 247, 214, 0.75),
+    -4px -34px 0 -1px rgba(255, 182, 50, 0.62);
 }
 
 #impact button:hover > div.relative::before,
 #impact button:focus > div.relative::before,
-#impact button:active > div.relative::before {
+#impact button:active > div.relative::before,
+#impact button:focus-visible > div.relative::before {
   animation: coh-sparkler-burst 680ms ease-out 1 forwards;
 }
 
 #impact button:hover > div.relative::after,
 #impact button:focus > div.relative::after,
-#impact button:active > div.relative::after {
+#impact button:active > div.relative::after,
+#impact button:focus-visible > div.relative::after {
   animation: coh-sparkler-burst 760ms ease-out 80ms 1 forwards;
 }
 
@@ -149,8 +167,27 @@ h1, h2 , h3 {
 
   100% {
     opacity: 0;
-    transform: translate(-50%, -50%) scale(1.9) rotate(18deg);
+    transform: translate(-50%, -50%) scale(2.1) rotate(18deg);
     filter: blur(1px);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  #impact button > div.relative::before,
+  #impact button > div.relative::after {
+    transform: translate(-50%, -50%) scale(0.2);
+  }
+
+  #impact button:focus > div.relative::before,
+  #impact button:active > div.relative::before,
+  #impact button:focus-visible > div.relative::before {
+    animation: coh-sparkler-burst 680ms ease-out 1 forwards;
+  }
+
+  #impact button:focus > div.relative::after,
+  #impact button:active > div.relative::after,
+  #impact button:focus-visible > div.relative::after {
+    animation: coh-sparkler-burst 760ms ease-out 80ms 1 forwards;
   }
 }
 
