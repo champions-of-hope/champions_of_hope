@@ -3,10 +3,13 @@
 import "./globals.css";
 import ScrollAnimations from "@/components/ScrollAnimations";
 
+const siteUrl = "https://championsofhope.io";
+const socialImage = `${siteUrl}/og-image.png?v=1`;
+
 export const metadata = {
   title: "Champions of Hope",
-  description: "Serious music for not so serious people",
-  metadataBase: new URL("https://championsofhope.io"),
+  description: "Live events, local artists, community impact, and FieldProof candidate readiness.",
+  metadataBase: new URL(siteUrl),
   manifest: "/manifest.json?v=3",
   themeColor: "#1E1B1B",
   icons: {
@@ -24,9 +27,24 @@ export const metadata = {
   },
   openGraph: {
     title: "Champions of Hope",
-    description: "Serious music for not so serious people",
-    url: "https://championsofhope.io",
+    description: "Live events, local artists, community impact, and FieldProof candidate readiness.",
+    url: siteUrl,
     siteName: "Champions of Hope",
+    type: "website",
+    images: [
+      {
+        url: socialImage,
+        width: 1200,
+        height: 630,
+        alt: "Champions of Hope gold crown logo and brand preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Champions of Hope",
+    description: "Live events, local artists, community impact, and FieldProof candidate readiness.",
+    images: [socialImage],
   },
 };
 
