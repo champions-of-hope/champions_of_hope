@@ -11,11 +11,11 @@ import {
 } from "react-icons/fa";
 
 const proofStats = [
-  { value: "150+", label: "candidate leads" },
-  { value: "70+", label: "manually validated candidates" },
-  { value: "70+", label: "validation calls completed" },
-  { value: "13", label: "fit-check-ready profiles" },
-  { value: "$450", label: "rough paid traffic test" },
+  { value: "170", label: "candidate records" },
+  { value: "95", label: "manually validated candidates" },
+  { value: "93", label: "validation calls completed" },
+  { value: "16", label: "fit-check-ready profiles" },
+  { value: "$542.44", label: "rough paid traffic test" },
 ];
 
 const partnerTypes = [
@@ -180,7 +180,7 @@ export default function AboutSection() {
               Not staffing. Not raw leads. Better signal before your team spends time.
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-700">
-              We manually screen candidates before they reach hiring or intake teams — work eligibility, transportation, trade interest, hands-on experience, timeline, wage expectations, responsiveness, and readiness.
+              We manually screen candidates before they reach hiring or intake teams, including work eligibility, transportation, trade interest, hands-on experience, timeline, wage expectations, responsiveness, and readiness.
             </p>
           </div>
 
@@ -278,24 +278,11 @@ export default function AboutSection() {
                 <p className="relative z-10 text-sm font-bold uppercase tracking-[0.2em] text-gray-400">
                   {item.label}
                 </p>
-
                 <div className="relative mt-5 inline-block">
-                  <span className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-24 w-24 -translate-x-1/2 -translate-y-1/2 scale-50 rounded-full border border-[#FFB632]/50 opacity-0 blur-[0.5px] transition-all duration-500 ease-out group-hover:scale-[1.75] group-hover:opacity-100 group-focus:scale-[1.75] group-focus:opacity-100 group-active:scale-[1.75] group-active:opacity-100" />
-                  <span className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white opacity-0 blur-[1px] transition-all duration-300 group-hover:opacity-90 group-focus:opacity-90 group-active:opacity-90" />
-                  <span className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[2px] w-16 origin-left -translate-y-1/2 scale-x-0 rounded-full bg-[#FFB632] opacity-0 shadow-[0_0_14px_#FFB632] transition-all duration-500 ease-out group-hover:scale-x-100 group-hover:opacity-100 group-focus:scale-x-100 group-focus:opacity-100 group-active:scale-x-100 group-active:opacity-100" />
-                  <span className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[2px] w-16 origin-left -translate-y-1/2 rotate-45 scale-x-0 rounded-full bg-[#FFB632] opacity-0 shadow-[0_0_14px_#FFB632] transition-all duration-500 ease-out group-hover:scale-x-100 group-hover:opacity-100 group-focus:scale-x-100 group-focus:opacity-100 group-active:scale-x-100 group-active:opacity-100" />
-                  <span className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[2px] w-16 origin-left -translate-y-1/2 rotate-90 scale-x-0 rounded-full bg-[#FFB632] opacity-0 shadow-[0_0_14px_#FFB632] transition-all duration-500 ease-out group-hover:scale-x-100 group-hover:opacity-100 group-focus:scale-x-100 group-focus:opacity-100 group-active:scale-x-100 group-active:opacity-100" />
-                  <span className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[2px] w-16 origin-left -translate-y-1/2 rotate-[135deg] scale-x-0 rounded-full bg-[#FFB632] opacity-0 shadow-[0_0_14px_#FFB632] transition-all duration-500 ease-out group-hover:scale-x-100 group-hover:opacity-100 group-focus:scale-x-100 group-focus:opacity-100 group-active:scale-x-100 group-active:opacity-100" />
-                  <span className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[2px] w-16 origin-left -translate-y-1/2 rotate-180 scale-x-0 rounded-full bg-[#FFB632] opacity-0 shadow-[0_0_14px_#FFB632] transition-all duration-500 ease-out group-hover:scale-x-100 group-hover:opacity-100 group-focus:scale-x-100 group-focus:opacity-100 group-active:scale-x-100 group-active:opacity-100" />
-                  <span className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[2px] w-16 origin-left -translate-y-1/2 rotate-[225deg] scale-x-0 rounded-full bg-[#FFB632] opacity-0 shadow-[0_0_14px_#FFB632] transition-all duration-500 ease-out group-hover:scale-x-100 group-hover:opacity-100 group-focus:scale-x-100 group-focus:opacity-100 group-active:scale-x-100 group-active:opacity-100" />
-                  <span className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[2px] w-16 origin-left -translate-y-1/2 rotate-[270deg] scale-x-0 rounded-full bg-[#FFB632] opacity-0 shadow-[0_0_14px_#FFB632] transition-all duration-500 ease-out group-hover:scale-x-100 group-hover:opacity-100 group-focus:scale-x-100 group-focus:opacity-100 group-active:scale-x-100 group-active:opacity-100" />
-                  <span className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[2px] w-16 origin-left -translate-y-1/2 rotate-[315deg] scale-x-0 rounded-full bg-[#FFB632] opacity-0 shadow-[0_0_14px_#FFB632] transition-all duration-500 ease-out group-hover:scale-x-100 group-hover:opacity-100 group-focus:scale-x-100 group-focus:opacity-100 group-active:scale-x-100 group-active:opacity-100" />
-
                   <p className="relative z-10 select-none text-3xl font-black text-[#FFB632] opacity-15 blur-[7px] transition duration-300 group-hover:opacity-100 group-hover:blur-0 group-focus:opacity-100 group-focus:blur-0 group-active:opacity-100 group-active:blur-0 sm:text-4xl">
                     {item.value}
                   </p>
                 </div>
-
                 <p className="relative z-10 mt-3 text-xs font-semibold uppercase tracking-[0.18em] text-gray-500 group-hover:text-gray-300 group-focus:text-gray-300">
                   Reveal impact
                 </p>
