@@ -121,6 +121,11 @@ export default function GalleryLightbox({ title, description, images }) {
             </button>
             <span>
               {activeIndex + 1} / {images.length} · {activeImage.caption}
+              {activeImage.credit && (
+                <span className="mt-1 block text-xs text-gray-400">
+                  Photo: {activeImage.credit}
+                </span>
+              )}
             </span>
             <button
               type="button"
