@@ -5,6 +5,11 @@ import GalleryLightbox from "@/components/GalleryLightbox";
 import Navbar from "@/components/Navbar";
 import React from "react";
 
+const raeCredit = {
+  credit: "@raenytuesdayart",
+  creditUrl: "https://www.instagram.com/raenytuesdayart/",
+};
+
 const galleryImages = [
   {
     src: "/assets/HeroSection/hero1.jpg",
@@ -65,6 +70,54 @@ const galleryImages = [
     src: "/gallery/coh-10-crowd.jpg",
     alt: "Crowd gathered at Champions of Hope 10",
     caption: "COH 10 crowd",
+  },
+  {
+    src: "/gallery/coh-250726-IMG_2204-19-rae.jpg",
+    alt: "Mixed media art display table at a Champions of Hope event",
+    caption: "Mixed media art display",
+    ...raeCredit,
+  },
+  {
+    src: "/gallery/coh-250726-IMG_2178-5-rae.jpg",
+    alt: "Local art vendor booth at a Champions of Hope event",
+    caption: "Local art vendor booth",
+    ...raeCredit,
+  },
+  {
+    src: "/gallery/coh-250726-IMG_2172-2-rae.jpg",
+    alt: "Social media links banner with artist and charity QR codes at a Champions of Hope event",
+    caption: "Artist and charity QR banner",
+    ...raeCredit,
+  },
+  {
+    src: "/gallery/witiko-250726-IMG_3349-72-rae.jpg",
+    alt: "Close-up of a guitarist performing at a Champions of Hope show",
+    caption: "Live guitar close-up",
+    ...raeCredit,
+  },
+  {
+    src: "/gallery/coh-2025-11-14-packed-room-band-performance-rae.jpg",
+    alt: "Band performing to a packed room at a Champions of Hope show",
+    caption: "Packed room performance",
+    ...raeCredit,
+  },
+  {
+    src: "/gallery/251114-IMG_3559-26-rae.jpg",
+    alt: "Raffle and stage moment during a Champions of Hope show",
+    caption: "Raffle and stage moment",
+    ...raeCredit,
+  },
+  {
+    src: "/gallery/251114-IMG_3561-28-rae.jpg",
+    alt: "Onstage giveaway moment during a Champions of Hope show",
+    caption: "Onstage giveaway moment",
+    ...raeCredit,
+  },
+  {
+    src: "/gallery/coh-250726-IMG_2607-48-rae.jpg",
+    alt: "Guests browsing prints and artwork at a Champions of Hope vendor table",
+    caption: "Guests browsing the vendor table",
+    ...raeCredit,
   },
 ];
 
