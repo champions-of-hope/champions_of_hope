@@ -402,7 +402,7 @@ export default function AboutSection() {
                 Champions of Hope started with Vancouver shows built around local music, art, community causes, and people actually showing up.
               </p>
               <p className="mt-5 rounded-2xl border border-[#FFB632]/30 bg-black/30 p-5 text-sm font-semibold leading-7 text-gray-200">
-                25% of ticket sales are donated to the selected cause. The remaining ticket revenue helps cover fixed artist guarantees and event costs. Champions of Hope currently does not take profit from the concert series.
+                25% of ticket sales are donated to the selected cause. The remaining ticket revenue helps cover fixed artist guarantees and event costs.
               </p>
             </div>
           </div>
