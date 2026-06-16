@@ -45,6 +45,80 @@ const lifetimeImpact = [
   { value: "$20,324", label: "given back to charities and artists" },
 ];
 
+const showProofImages = [
+  {
+    src: "/gallery/COH-209.jpg",
+    alt: "Crowd and band at a Champions of Hope show",
+    caption: "Show night",
+  },
+  {
+    src: "/gallery/coh-10-crowd-hand.jpg",
+    alt: "Crowd raising a hand at a Champions of Hope show",
+    caption: "Crowd energy",
+  },
+  {
+    src: "/assets/AboutSection/squared1.jpg",
+    alt: "Artist performing at a Champions of Hope show",
+    caption: "Live performance",
+  },
+  {
+    src: "/gallery/coh-10-crowd.jpg",
+    alt: "Crowd gathered at Champions of Hope 10",
+    caption: "People in the room",
+  },
+];
+
+const showTestimonials = [
+  {
+    quote:
+      "I cannot remember a charity event we have done that is as good as COH... the homegrown non-corporate nature of it makes the shows feel we are actually making a difference, like our contribution actually matters.",
+    attribution: "Beni, Sleepy Gonzales",
+    type: "Artist feedback",
+  },
+  {
+    quote:
+      "Awesome night! The CoH team are contributing a valuable space to the local scene and are great to work with.",
+    attribution: "Luke Bidulka, guitarist for Witiko",
+    type: "Artist feedback",
+  },
+  {
+    quote:
+      "Communication was easy and everything seemed really well organized. Can totally tell it’s a passion project. You all really went above and beyond.",
+    attribution: "Josh McKenna",
+    type: "Artist feedback",
+  },
+  {
+    quote:
+      "The experience was amazing! Incredible seeing all the people who live for music and art and want to help support fellow artists and vancouverites.",
+    attribution: "Cason Lof, drummer for Caught Feelings",
+    type: "Artist feedback",
+  },
+  {
+    quote:
+      "I had so much fun, the music was incredible and the event supported a great cause. The crowd was hyped and happy! What else can you ask for?",
+    attribution: "Audience member",
+    type: "Audience feedback",
+  },
+  {
+    quote:
+      "Everybody involved was friendly and passionate. Promotion on C.O.H’s end made the show feel professional and I really enjoyed working with Jimmy, C.O.H, and The Mezzanine.",
+    attribution: "Silas, bass player for Transient",
+    type: "Artist feedback",
+  },
+  {
+    quote:
+      "Everything about the event from the promotion and the actual evening went really well. Incredibly glad to have been included and would do it all again in a heartbeat!",
+    attribution: "Brooks, The Lily Dippers",
+    type: "Artist feedback",
+  },
+  {
+    quote:
+      "The atmosphere was so positive, and the team was super helpful and organized. Overall, it was a fantastic event, and I’d love to join again!",
+    attribution: "Anonymous artist vendor",
+    type: "Artist vendor feedback",
+  },
+];
+
 const aboutImages = [
   {
     src: "/assets/AboutSection/squared1.jpg",
@@ -288,6 +362,100 @@ export default function AboutSection() {
                 </p>
               </button>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="show-proof" className="scroll-mt-28 bg-[#1E1B1B] px-6 py-20 text-white sm:px-12">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+            <div className="grid grid-cols-2 gap-4">
+              {showProofImages.map((image, index) => (
+                <div
+                  key={image.src}
+                  className={`group relative overflow-hidden rounded-3xl border border-white/10 bg-black shadow-xl ${index === 0 ? "col-span-2 aspect-[16/10]" : "aspect-[4/3]"}`}
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover transition duration-700 group-hover:scale-105 group-hover:opacity-90"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5">
+                    <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#FFB632]">
+                      {image.caption}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-8 shadow-xl lg:p-10">
+              <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-[#FFB632]">
+                From the shows
+              </p>
+              <h2 className="text-4xl font-black uppercase leading-tight sm:text-5xl">
+                Real feedback from artists, vendors, and people in the room.
+              </h2>
+              <p className="mt-6 text-lg leading-8 text-gray-200">
+                Champions of Hope started with Vancouver shows built around local music, art, community causes, and people actually showing up.
+              </p>
+              <p className="mt-5 rounded-2xl border border-[#FFB632]/30 bg-black/30 p-5 text-sm font-semibold leading-7 text-gray-200">
+                25% of ticket sales are donated to the selected cause. The remaining ticket revenue helps cover fixed artist guarantees and event costs. Champions of Hope currently does not take profit from the concert series.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            {showTestimonials.map((testimonial) => (
+              <article
+                key={testimonial.attribution}
+                className="flex h-full flex-col rounded-3xl border border-white/10 bg-black/30 p-6 transition hover:border-[#FFB632]/60 hover:bg-black/45"
+              >
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#3D7AD5]">
+                  {testimonial.type}
+                </p>
+                <blockquote className="mt-5 flex-1 text-base font-semibold leading-7 text-gray-100">
+                  “{testimonial.quote}”
+                </blockquote>
+                <p className="mt-6 border-t border-white/10 pt-4 text-sm font-bold text-[#FFB632]">
+                  {testimonial.attribution}
+                </p>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-12 rounded-3xl border border-white/10 bg-white/[0.04] p-6 text-center sm:p-8">
+            <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#FFB632]">
+              Support the next show
+            </p>
+            <h3 className="mx-auto mt-3 max-w-3xl text-3xl font-black uppercase leading-tight sm:text-4xl">
+              Help underwrite a future Champions of Hope event.
+            </h3>
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-gray-300">
+              Sponsors help cover fixed show costs so local artists can be paid, the cause still gets its share, and the night feels real in the room.
+            </p>
+            <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
+              <Link
+                href="https://forms.gle/oet8PHWEm2Hcixkr8"
+                className="rounded-full bg-[#FFB632] px-7 py-4 text-center font-bold text-black transition hover:bg-white"
+              >
+                Sponsorship Inquiry
+              </Link>
+              <Link
+                href="https://forms.gle/95vM7RY89dMAGERT6"
+                className="rounded-full bg-[#3D7AD5] px-7 py-4 text-center font-bold text-white transition hover:bg-white hover:text-black"
+              >
+                Apply as Band / Artist
+              </Link>
+              <Link
+                href="/watch"
+                className="rounded-full border border-white/30 px-7 py-4 text-center font-bold text-white transition hover:bg-white/10"
+              >
+                View Gallery
+              </Link>
+            </div>
           </div>
         </div>
       </section>
