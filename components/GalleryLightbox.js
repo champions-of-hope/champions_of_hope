@@ -124,6 +124,19 @@ export default function GalleryLightbox({ title, description, images }) {
               {activeImage.credit && (
                 <span className="mt-1 block text-xs text-gray-400">
                   Photo: {activeImage.credit}
+                  {activeImage.creditUrl && (
+                    <>
+                      {" "}
+                      <a
+                        href={activeImage.creditUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-bold text-[#FFB632] underline-offset-4 hover:underline"
+                      >
+                        Instagram
+                      </a>
+                    </>
+                  )}
                 </span>
               )}
             </span>
