@@ -5,392 +5,81 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import React, { useEffect, useState } from "react";
 
-const raeCredit = {
+const posterCredit = {
+  creditLabel: "Poster art",
+  credit: "@andybillyart",
+  creditUrl: "https://www.instagram.com/andybillyart/",
+};
+
+const photoCredit = {
+  creditLabel: "Photo",
   credit: "@raenytuesdayart",
   creditUrl: "https://www.instagram.com/raenytuesdayart/",
 };
 
+const poster = (file, caption, alt, tilt = "lg:rotate-1") => ({
+  src: `/gallery/${file}`,
+  alt,
+  caption,
+  label: "Poster archive",
+  type: "poster",
+  aspect: "aspect-[3/4]",
+  tilt,
+  ...posterCredit,
+});
+
+const photo = (src, caption, alt, aspect = "aspect-[4/3]", tilt = "lg:rotate-1", credited = true) => ({
+  src,
+  alt,
+  caption,
+  label: "Show photo",
+  type: "photo",
+  aspect,
+  tilt,
+  ...(credited ? photoCredit : {}),
+});
+
 const galleryItems = [
-  {
-    src: "/gallery/coh-volume-11-crisis-centre-bc-poster.jpg",
-    alt: "Champions of Hope Volume XI pop up punk show poster for Crisis Centre BC",
-    caption: "Volume XI poster",
-    label: "Poster archive",
-    type: "poster",
-    aspect: "aspect-[3/4]",
-    tilt: "lg:-rotate-2",
-  },
-  {
-    src: "/gallery/coh-2025-11-14-packed-room-band-performance-rae.jpg",
-    alt: "Band performing to a packed room at a Champions of Hope show",
-    caption: "Packed room performance",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[4/3]",
-    tilt: "lg:rotate-1",
-    ...raeCredit,
-  },
-  {
-    src: "/gallery/coh-volume-1-first-annual-cmha-poster.jpg",
-    alt: "Champions of Hope first annual live music fundraiser poster for the Canadian Mental Health Association",
-    caption: "Volume I poster",
-    label: "Poster archive",
-    type: "poster",
-    aspect: "aspect-[3/4]",
-    tilt: "lg:rotate-2",
-  },
-  {
-    src: "/gallery/251114-IMG_3864-3-rae.jpg",
-    alt: "Audience clapping under red stage light trails at a Champions of Hope show",
-    caption: "Crowd clapping under stage lights",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[4/3]",
-    tilt: "lg:-rotate-1",
-    ...raeCredit,
-  },
-  {
-    src: "/assets/HeroSection/hero1.jpg",
-    alt: "Champions of Hope stage detail",
-    caption: "Stage moment",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[4/3]",
-    tilt: "lg:rotate-1",
-  },
-  {
-    src: "/gallery/coh-volume-6-cmha-poster.jpg",
-    alt: "Champions of Hope Volume Six poster for CMHA at The Mezzanine",
-    caption: "Volume VI poster",
-    label: "Poster archive",
-    type: "poster",
-    aspect: "aspect-[3/4]",
-    tilt: "lg:-rotate-1",
-  },
-  {
-    src: "/gallery/251114-IMG_3171-91-rae.jpg",
-    alt: "Trumpet player performing on stage under warm red and orange light",
-    caption: "Trumpet performance",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[4/3]",
-    tilt: "lg:rotate-2",
-    ...raeCredit,
-  },
-  {
-    src: "/gallery/coh-250726-IMG_2172-2-rae.jpg",
-    alt: "Social media links banner with artist and charity QR codes at a Champions of Hope event",
-    caption: "Artist and charity QR banner",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[4/3]",
-    tilt: "lg:-rotate-2",
-    ...raeCredit,
-  },
-  {
-    src: "/gallery/coh-volume-4-vancouver-aboriginal-friendship-centre-poster.jpg",
-    alt: "Champions of Hope Volume 4 poster for the Vancouver Aboriginal Friendship Centre at The Astoria",
-    caption: "Volume IV poster",
-    label: "Poster archive",
-    type: "poster",
-    aspect: "aspect-[3/4]",
-    tilt: "lg:rotate-1",
-  },
-  {
-    src: "/gallery/coh-250726-IMG_2204-19-rae.jpg",
-    alt: "Mixed media art display table at a Champions of Hope event",
-    caption: "Mixed media art display",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[4/3]",
-    tilt: "lg:rotate-1",
-    ...raeCredit,
-  },
-  {
-    src: "/gallery/IMG_9431.jpg",
-    alt: "Crowd gathered near the front during a Champions of Hope show",
-    caption: "Crowd at the front",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[4/3]",
-    tilt: "lg:-rotate-1",
-    ...raeCredit,
-  },
-  {
-    src: "/gallery/coh-volume-8-carnegie-housing-project-poster.jpg",
-    alt: "Champions of Hope Volume Eight poster for Carnegie Housing Project at The Mezzanine",
-    caption: "Volume VIII poster",
-    label: "Poster archive",
-    type: "poster",
-    aspect: "aspect-[3/4]",
-    tilt: "lg:-rotate-2",
-  },
-  {
-    src: "/gallery/witiko-250726-IMG_3349-72-rae.jpg",
-    alt: "Close-up of a guitarist performing at a Champions of Hope show",
-    caption: "Live guitar close-up",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[4/3]",
-    tilt: "lg:rotate-2",
-    ...raeCredit,
-  },
-  {
-    src: "/gallery/251114-IMG_3561-28-rae.jpg",
-    alt: "Onstage giveaway moment during a Champions of Hope show",
-    caption: "Onstage giveaway moment",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[4/3]",
-    tilt: "lg:-rotate-1",
-    ...raeCredit,
-  },
-  {
-    src: "/gallery/coh-volume-3-vancouver-food-bank-poster.jpg",
-    alt: "Champions of Hope Volume 3 poster for the Vancouver Food Bank",
-    caption: "Volume III poster",
-    label: "Poster archive",
-    type: "poster",
-    aspect: "aspect-[3/4]",
-    tilt: "lg:rotate-2",
-  },
-  {
-    src: "/gallery/251114-IMG_3532-163-rae.jpg",
-    alt: "Drummer playing with motion blur and colourful stage lights at a Champions of Hope show",
-    caption: "Drummer in motion",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[3/4]",
-    tilt: "lg:rotate-1",
-    ...raeCredit,
-  },
-  {
-    src: "/gallery/coh-250726-IMG_2228-33-rae.jpg",
-    alt: "Local vendor tables and artwork set up inside the venue",
-    caption: "Local vendor tables",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[4/3]",
-    tilt: "lg:-rotate-2",
-    ...raeCredit,
-  },
-  {
-    src: "/gallery/coh-volume-9-empower-through-music-poster.jpg",
-    alt: "Champions of Hope Volume 9 poster for Empower Through Music at The Mezzanine",
-    caption: "Volume IX poster",
-    label: "Poster archive",
-    type: "poster",
-    aspect: "aspect-[3/4]",
-    tilt: "lg:-rotate-1",
-  },
-  {
-    src: "/gallery/IMG_9604.jpg",
-    alt: "Black and white close-up of a vocalist singing into a microphone",
-    caption: "Black and white vocal moment",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[3/4]",
-    tilt: "lg:rotate-1",
-    ...raeCredit,
-  },
-  {
-    src: "/gallery/coh-250726-IMG_2190-13-rae.jpg",
-    alt: "Champions of Hope sponsor board with sponsor logos and QR codes",
-    caption: "Sponsor board",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[3/4]",
-    tilt: "lg:rotate-2",
-    ...raeCredit,
-  },
-  {
-    src: "/gallery/coh-volume-5-downtown-eastside-womens-centre-poster.jpg",
-    alt: "Champions of Hope Volume Five poster for the Downtown Eastside Women's Centre at The Mezzanine",
-    caption: "Volume V poster",
-    label: "Poster archive",
-    type: "poster",
-    aspect: "aspect-[3/4]",
-    tilt: "lg:rotate-1",
-  },
-  {
-    src: "/gallery/coh-250726-IMG_2607-48-rae.jpg",
-    alt: "Guests browsing prints and artwork at a Champions of Hope vendor table",
-    caption: "Guests browsing the vendor table",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[4/3]",
-    tilt: "lg:-rotate-1",
-    ...raeCredit,
-  },
-  {
-    src: "/gallery/caughtfeelings-250726-IMG_2902-136-rae.jpg",
-    alt: "Caught Feelings performing on stage with colourful motion blur",
-    caption: "Band in motion",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[4/3]",
-    tilt: "lg:rotate-1",
-    ...raeCredit,
-  },
-  {
-    src: "/gallery/coh-volume-10-backpack-buddies-poster.jpg",
-    alt: "Champions of Hope Volume X poster for Backpack Buddies at The Mezzanine",
-    caption: "Volume X poster",
-    label: "Poster archive",
-    type: "poster",
-    aspect: "aspect-[3/4]",
-    tilt: "lg:-rotate-2",
-  },
-  {
-    src: "/gallery/COH-209.jpg",
-    alt: "Champions of Hope crowd and band",
-    caption: "Show night",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[4/3]",
-    tilt: "lg:-rotate-1",
-  },
-  {
-    src: "/gallery/coh-volume-2-vancouver-christmas-bureau-poster.jpg",
-    alt: "Champions of Hope Volume 2 poster for the Vancouver Christmas Bureau",
-    caption: "Volume II poster",
-    label: "Poster archive",
-    type: "poster",
-    aspect: "aspect-[3/4]",
-    tilt: "lg:rotate-2",
-  },
-  {
-    src: "/gallery/IMG_8636-16.jpg",
-    alt: "Band performing to a crowd with raised hands at a Champions of Hope show",
-    caption: "Band playing to the crowd",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[4/3]",
-    tilt: "lg:rotate-2",
-    ...raeCredit,
-  },
-  {
-    src: "/gallery/caughtfeelings-250726-IMG_2871-126-rae.jpg",
-    alt: "Guitarists performing on stage at a Champions of Hope show",
-    caption: "Guitarists on stage",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[4/3]",
-    tilt: "lg:-rotate-1",
-    ...raeCredit,
-  },
-  {
-    src: "/gallery/coh-volume-7-lower-mainland-christmas-bureau-poster.jpg",
-    alt: "Champions of Hope Volume Seven poster for the Lower Mainland Christmas Bureau at The Cobalt",
-    caption: "Volume VII poster",
-    label: "Poster archive",
-    type: "poster",
-    aspect: "aspect-[3/4]",
-    tilt: "lg:-rotate-1",
-  },
-  {
-    src: "/gallery/coh-250726-IMG_2229-34-rae.jpg",
-    alt: "Stage setup with guitars, drums, and an All For Art sign in the foreground",
-    caption: "Stage setup and guitars",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[4/3]",
-    tilt: "lg:rotate-1",
-    ...raeCredit,
-  },
-  {
-    src: "/gallery/IMG_4141-2.jpg",
-    alt: "Performer speaking into a microphone and giving a thumbs-up from the stage",
-    caption: "Onstage thumbs-up",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[4/3]",
-    tilt: "lg:-rotate-2",
-    ...raeCredit,
-  },
-  {
-    src: "/gallery/251114-IMG_2936-71-rae.jpg",
-    alt: "Local art and vendor table display at a Champions of Hope event",
-    caption: "Vendor table and local art",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[4/3]",
-    tilt: "lg:rotate-2",
-    ...raeCredit,
-  },
-  {
-    src: "/gallery/IMG_9283.jpg",
-    alt: "Support your scene shirt displayed on a table at a Champions of Hope event",
-    caption: "Support your scene merch",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[3/4]",
-    tilt: "lg:-rotate-1",
-    ...raeCredit,
-  },
-  {
-    src: "/assets/HeroSection/hero2.jpg",
-    alt: "Champions of Hope live event detail",
-    caption: "Live moment",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[4/3]",
-    tilt: "lg:rotate-1",
-  },
-  {
-    src: "/assets/AboutSection/squared2.jpg",
-    alt: "Community crowd at a Champions of Hope event",
-    caption: "Community moments",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[4/3]",
-    tilt: "lg:-rotate-2",
-  },
-  {
-    src: "/gallery/coh-10-art2.jpg",
-    alt: "Art vendor display at a Champions of Hope event",
-    caption: "Local art at COH 10",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[4/3]",
-    tilt: "lg:rotate-2",
-  },
-  {
-    src: "/gallery/coh-10-crowd.jpg",
-    alt: "Crowd gathered at Champions of Hope 10",
-    caption: "COH 10 crowd",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[4/3]",
-    tilt: "lg:-rotate-1",
-  },
-  {
-    src: "/gallery/coh-10-artist.jpg",
-    alt: "Artist at Champions of Hope 10",
-    caption: "COH 10 artist moment",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[4/3]",
-    tilt: "lg:rotate-1",
-  },
-  {
-    src: "/assets/AboutSection/squared1.jpg",
-    alt: "Artist performing at a Champions of Hope show",
-    caption: "Live performance",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[4/3]",
-    tilt: "lg:rotate-2",
-  },
-  {
-    src: "/assets/AboutSection/squared3.jpg",
-    alt: "Band performing under red stage lights",
-    caption: "Local artists",
-    label: "Show photo",
-    type: "photo",
-    aspect: "aspect-[4/3]",
-    tilt: "lg:-rotate-1",
-  },
+  poster("coh-volume-11-crisis-centre-bc-poster.jpg", "Volume XI poster", "Champions of Hope Volume XI pop up punk show poster for Crisis Centre BC", "lg:-rotate-2"),
+  photo("/gallery/coh-2025-11-14-packed-room-band-performance-rae.jpg", "Packed room performance", "Band performing to a packed room at a Champions of Hope show"),
+  poster("coh-volume-1-first-annual-cmha-poster.jpg", "Volume I poster", "Champions of Hope first annual live music fundraiser poster for the Canadian Mental Health Association", "lg:rotate-2"),
+  photo("/gallery/251114-IMG_3864-3-rae.jpg", "Crowd clapping under stage lights", "Audience clapping under red stage light trails at a Champions of Hope show", "aspect-[4/3]", "lg:-rotate-1"),
+  photo("/assets/HeroSection/hero1.jpg", "Stage moment", "Champions of Hope stage detail", "aspect-[4/3]", "lg:rotate-1", false),
+  poster("coh-volume-6-cmha-poster.jpg", "Volume VI poster", "Champions of Hope Volume Six poster for CMHA at The Mezzanine", "lg:-rotate-1"),
+  photo("/gallery/251114-IMG_3171-91-rae.jpg", "Trumpet performance", "Trumpet player performing on stage under warm red and orange light", "aspect-[4/3]", "lg:rotate-2"),
+  photo("/gallery/coh-250726-IMG_2172-2-rae.jpg", "Artist and charity QR banner", "Social media links banner with artist and charity QR codes at a Champions of Hope event", "aspect-[4/3]", "lg:-rotate-2"),
+  poster("coh-volume-4-vancouver-aboriginal-friendship-centre-poster.jpg", "Volume IV poster", "Champions of Hope Volume 4 poster for the Vancouver Aboriginal Friendship Centre at The Astoria"),
+  photo("/gallery/coh-250726-IMG_2204-19-rae.jpg", "Mixed media art display", "Mixed media art display table at a Champions of Hope event"),
+  photo("/gallery/IMG_9431.jpg", "Crowd at the front", "Crowd gathered near the front during a Champions of Hope show", "aspect-[4/3]", "lg:-rotate-1"),
+  poster("coh-volume-8-carnegie-housing-project-poster.jpg", "Volume VIII poster", "Champions of Hope Volume Eight poster for Carnegie Housing Project at The Mezzanine", "lg:-rotate-2"),
+  photo("/gallery/witiko-250726-IMG_3349-72-rae.jpg", "Live guitar close-up", "Close-up of a guitarist performing at a Champions of Hope show", "aspect-[4/3]", "lg:rotate-2"),
+  photo("/gallery/251114-IMG_3561-28-rae.jpg", "Onstage giveaway moment", "Onstage giveaway moment during a Champions of Hope show", "aspect-[4/3]", "lg:-rotate-1"),
+  poster("coh-volume-3-vancouver-food-bank-poster.jpg", "Volume III poster", "Champions of Hope Volume 3 poster for the Vancouver Food Bank", "lg:rotate-2"),
+  photo("/gallery/251114-IMG_3532-163-rae.jpg", "Drummer in motion", "Drummer playing with motion blur and colourful stage lights at a Champions of Hope show", "aspect-[3/4]"),
+  photo("/gallery/coh-250726-IMG_2228-33-rae.jpg", "Local vendor tables", "Local vendor tables and artwork set up inside the venue", "aspect-[4/3]", "lg:-rotate-2"),
+  poster("coh-volume-9-empower-through-music-poster.jpg", "Volume IX poster", "Champions of Hope Volume 9 poster for Empower Through Music at The Mezzanine", "lg:-rotate-1"),
+  photo("/gallery/IMG_9604.jpg", "Black and white vocal moment", "Black and white close-up of a vocalist singing into a microphone", "aspect-[3/4]"),
+  photo("/gallery/coh-250726-IMG_2190-13-rae.jpg", "Sponsor board", "Champions of Hope sponsor board with sponsor logos and QR codes", "aspect-[3/4]", "lg:rotate-2"),
+  poster("coh-volume-5-downtown-eastside-womens-centre-poster.jpg", "Volume V poster", "Champions of Hope Volume Five poster for the Downtown Eastside Women's Centre at The Mezzanine"),
+  photo("/gallery/coh-250726-IMG_2607-48-rae.jpg", "Guests browsing the vendor table", "Guests browsing prints and artwork at a Champions of Hope vendor table", "aspect-[4/3]", "lg:-rotate-1"),
+  photo("/gallery/caughtfeelings-250726-IMG_2902-136-rae.jpg", "Band in motion", "Caught Feelings performing on stage with colourful motion blur"),
+  poster("coh-volume-10-backpack-buddies-poster.jpg", "Volume X poster", "Champions of Hope Volume X poster for Backpack Buddies at The Mezzanine", "lg:-rotate-2"),
+  photo("/gallery/COH-209.jpg", "Show night", "Champions of Hope crowd and band", "aspect-[4/3]", "lg:-rotate-1", false),
+  poster("coh-volume-2-vancouver-christmas-bureau-poster.jpg", "Volume II poster", "Champions of Hope Volume 2 poster for the Vancouver Christmas Bureau", "lg:rotate-2"),
+  photo("/gallery/IMG_8636-16.jpg", "Band playing to the crowd", "Band performing to a crowd with raised hands at a Champions of Hope show", "aspect-[4/3]", "lg:rotate-2"),
+  photo("/gallery/caughtfeelings-250726-IMG_2871-126-rae.jpg", "Guitarists on stage", "Guitarists performing on stage at a Champions of Hope show", "aspect-[4/3]", "lg:-rotate-1"),
+  poster("coh-volume-7-lower-mainland-christmas-bureau-poster.jpg", "Volume VII poster", "Champions of Hope Volume Seven poster for the Lower Mainland Christmas Bureau at The Cobalt", "lg:-rotate-1"),
+  photo("/gallery/coh-250726-IMG_2229-34-rae.jpg", "Stage setup and guitars", "Stage setup with guitars, drums, and an All For Art sign in the foreground"),
+  photo("/gallery/IMG_4141-2.jpg", "Onstage thumbs-up", "Performer speaking into a microphone and giving a thumbs-up from the stage", "aspect-[4/3]", "lg:-rotate-2"),
+  photo("/gallery/251114-IMG_2936-71-rae.jpg", "Vendor table and local art", "Local art and vendor table display at a Champions of Hope event", "aspect-[4/3]", "lg:rotate-2"),
+  photo("/gallery/IMG_9283.jpg", "Support your scene merch", "Support your scene shirt displayed on a table at a Champions of Hope event", "aspect-[3/4]", "lg:-rotate-1"),
+  photo("/assets/HeroSection/hero2.jpg", "Live moment", "Champions of Hope live event detail", "aspect-[4/3]", "lg:rotate-1", false),
+  photo("/assets/AboutSection/squared2.jpg", "Community moments", "Community crowd at a Champions of Hope event", "aspect-[4/3]", "lg:-rotate-2", false),
+  photo("/gallery/coh-10-art2.jpg", "Local art at COH 10", "Art vendor display at a Champions of Hope event", "aspect-[4/3]", "lg:rotate-2", false),
+  photo("/gallery/coh-10-crowd.jpg", "COH 10 crowd", "Crowd gathered at Champions of Hope 10", "aspect-[4/3]", "lg:-rotate-1", false),
+  photo("/gallery/coh-10-artist.jpg", "COH 10 artist moment", "Artist at Champions of Hope 10", "aspect-[4/3]", "lg:rotate-1", false),
+  photo("/assets/AboutSection/squared1.jpg", "Live performance", "Artist performing at a Champions of Hope show", "aspect-[4/3]", "lg:rotate-2", false),
+  photo("/assets/AboutSection/squared3.jpg", "Local artists", "Band performing under red stage lights", "aspect-[4/3]", "lg:-rotate-1", false),
 ];
 
 const tapeStyles = [
@@ -435,6 +124,11 @@ function GalleryCard({ item, index, onOpen }) {
           <p className="mt-1 text-lg font-black uppercase leading-tight text-[#1E1B1B]">
             {item.caption}
           </p>
+          {item.credit && (
+            <p className="mt-2 text-xs font-bold uppercase tracking-[0.12em] text-[#1E1B1B]/60">
+              {item.creditLabel}: {item.credit}
+            </p>
+          )}
         </div>
       </div>
     </button>
@@ -491,6 +185,9 @@ export default function Watch() {
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-white/75 sm:text-xl">
                   A scrapbook-style archive from Champions of Hope shows, built from live photos, poster art, artist moments, vendor tables, and the people who keep showing up.
                 </p>
+                <p className="mt-4 max-w-2xl text-sm font-bold uppercase tracking-[0.18em] text-[#FFB632]">
+                  Poster art by @andybillyart. Show photos by @raenytuesdayart where credited.
+                </p>
               </div>
 
               <div className="relative hidden min-h-[430px] lg:block">
@@ -541,7 +238,7 @@ export default function Watch() {
                 DIY archive wall
               </p>
               <p className="max-w-2xl text-sm leading-6 text-white/65">
-                Click any piece to open it full-screen. Show photos include photographer credit in the lightbox.
+                Click any piece to open it full-screen. Poster art and show photo credits appear on each piece and inside the lightbox.
               </p>
             </div>
 
@@ -610,7 +307,7 @@ export default function Watch() {
               {activeIndex + 1} / {galleryItems.length} · {activeItem.caption}
               {activeItem.credit && (
                 <span className="mt-1 block text-xs text-gray-400">
-                  Photo: {activeItem.credit}
+                  {activeItem.creditLabel}: {activeItem.credit}
                   {activeItem.creditUrl && (
                     <>
                       {" "}
