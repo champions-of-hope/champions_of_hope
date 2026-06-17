@@ -83,14 +83,60 @@ const galleryItems = [
 ];
 
 const tapeStyles = [
-  "left-4 -top-3 rotate-[-8deg] bg-[#FFB632]",
-  "right-8 -top-3 rotate-[7deg] bg-[#F05A28]",
-  "left-1/2 -top-3 -translate-x-1/2 rotate-[2deg] bg-white/80",
-  "left-8 -top-3 rotate-[4deg] bg-[#50C9CE]",
+  {
+    position: "left-4 -top-5 -rotate-[8deg]",
+    size: "h-9 w-32",
+    color: "rgba(239, 217, 165, 0.78)",
+    edge: "rgba(239, 217, 165, 0.58)",
+  },
+  {
+    position: "right-8 -top-5 rotate-[7deg]",
+    size: "h-8 w-28",
+    color: "rgba(245, 232, 195, 0.74)",
+    edge: "rgba(245, 232, 195, 0.55)",
+  },
+  {
+    position: "left-1/2 -top-5 -translate-x-1/2 rotate-[2deg]",
+    size: "h-8 w-36",
+    color: "rgba(255, 246, 210, 0.68)",
+    edge: "rgba(255, 246, 210, 0.48)",
+  },
+  {
+    position: "left-8 -top-5 rotate-[4deg]",
+    size: "h-9 w-30",
+    color: "rgba(223, 206, 158, 0.72)",
+    edge: "rgba(223, 206, 158, 0.52)",
+  },
 ];
 
+function TapeStrip({ tape }) {
+  return (
+    <span
+      className={`pointer-events-none absolute z-10 ${tape.position} ${tape.size} mix-blend-multiply`}
+      aria-hidden="true"
+    >
+      <span
+        className="absolute inset-0 rounded-[2px] shadow-[0_2px_10px_rgba(0,0,0,0.22)] backdrop-blur-[1px]"
+        style={{ backgroundColor: tape.color }}
+      />
+      <span className="absolute inset-0 opacity-35 [background-image:repeating-linear-gradient(90deg,rgba(255,255,255,0.55)_0px,rgba(255,255,255,0.55)_1px,transparent_1px,transparent_7px)]" />
+      <span className="absolute inset-0 opacity-25 [background-image:repeating-linear-gradient(0deg,rgba(0,0,0,0.18)_0px,rgba(0,0,0,0.18)_1px,transparent_1px,transparent_11px)]" />
+      <span
+        className="absolute -left-2 top-0 h-full w-4 [clip-path:polygon(0_0,100%_8%,70%_24%,100%_42%,65%_61%,100%_82%,0_100%)]"
+        style={{ backgroundColor: tape.edge }}
+      />
+      <span
+        className="absolute -right-2 top-0 h-full w-4 [clip-path:polygon(100%_0,0_8%,30%_25%,0_44%,35%_63%,0_84%,100%_100%)]"
+        style={{ backgroundColor: tape.edge }}
+      />
+      <span className="absolute left-3 right-3 top-1 h-[1px] bg-white/45" />
+      <span className="absolute bottom-1 left-3 right-3 h-[1px] bg-black/10" />
+    </span>
+  );
+}
+
 function GalleryCard({ item, index, onOpen }) {
-  const tapeClass = tapeStyles[index % tapeStyles.length];
+  const tape = tapeStyles[index % tapeStyles.length];
   const isPoster = item.type === "poster";
 
   return (
@@ -100,9 +146,9 @@ function GalleryCard({ item, index, onOpen }) {
       className={`group relative mb-8 w-full break-inside-avoid text-left transition duration-300 hover:z-20 hover:-translate-y-1 ${item.tilt}`}
       aria-label={`Open ${item.caption}`}
     >
-      <span className={`absolute z-10 h-7 w-24 opacity-90 shadow-md ${tapeClass}`} />
+      <TapeStrip tape={tape} />
       <div
-        className={`relative overflow-hidden border shadow-2xl transition duration-300 group-hover:scale-[1.015] ${
+        className={`relative overflow-visible border shadow-2xl transition duration-300 group-hover:scale-[1.015] ${
           isPoster
             ? "rounded-sm border-black/20 bg-[#F6E8C8] p-2"
             : "rounded-xl border-white/20 bg-white p-2"
