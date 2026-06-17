@@ -119,6 +119,90 @@ const galleryImages = [
     caption: "Guests browsing the vendor table",
     ...raeCredit,
   },
+  {
+    src: "/gallery/251114-IMG_3171-91-rae.jpg",
+    alt: "Trumpet player performing on stage under warm red and orange light",
+    caption: "Trumpet performance",
+    ...raeCredit,
+  },
+  {
+    src: "/gallery/251114-IMG_3532-163-rae.jpg",
+    alt: "Drummer playing with motion blur and colourful stage lights at a Champions of Hope show",
+    caption: "Drummer in motion",
+    ...raeCredit,
+  },
+  {
+    src: "/gallery/251114-IMG_2936-71-rae.jpg",
+    alt: "Local art and vendor table display at a Champions of Hope event",
+    caption: "Vendor table and local art",
+    ...raeCredit,
+  },
+  {
+    src: "/gallery/251114-IMG_3864-3-rae.jpg",
+    alt: "Audience clapping under red stage light trails at a Champions of Hope show",
+    caption: "Crowd clapping under stage lights",
+    ...raeCredit,
+  },
+  {
+    src: "/gallery/IMG_4141-2.jpg",
+    alt: "Performer speaking into a microphone and giving a thumbs-up from the stage",
+    caption: "Onstage thumbs-up",
+    ...raeCredit,
+  },
+  {
+    src: "/gallery/IMG_9283.jpg",
+    alt: "Support your scene shirt displayed on a table at a Champions of Hope event",
+    caption: "Support your scene merch",
+    ...raeCredit,
+  },
+  {
+    src: "/gallery/IMG_9431.jpg",
+    alt: "Crowd gathered near the front during a Champions of Hope show",
+    caption: "Crowd at the front",
+    ...raeCredit,
+  },
+  {
+    src: "/gallery/IMG_9604.jpg",
+    alt: "Black and white close-up of a vocalist singing into a microphone",
+    caption: "Black and white vocal moment",
+    ...raeCredit,
+  },
+  {
+    src: "/gallery/IMG_8636-16.jpg",
+    alt: "Band performing to a crowd with raised hands at a Champions of Hope show",
+    caption: "Band playing to the crowd",
+    ...raeCredit,
+  },
+  {
+    src: "/gallery/caughtfeelings-250726-IMG_2902-136-rae.jpg",
+    alt: "Caught Feelings performing on stage with colourful motion blur",
+    caption: "Band in motion",
+    ...raeCredit,
+  },
+  {
+    src: "/gallery/caughtfeelings-250726-IMG_2871-126-rae.jpg",
+    alt: "Guitarists performing on stage at a Champions of Hope show",
+    caption: "Guitarists on stage",
+    ...raeCredit,
+  },
+  {
+    src: "/gallery/coh-250726-IMG_2190-13-rae.jpg",
+    alt: "Champions of Hope sponsor board with sponsor logos and QR codes",
+    caption: "Sponsor board",
+    ...raeCredit,
+  },
+  {
+    src: "/gallery/coh-250726-IMG_2228-33-rae.jpg",
+    alt: "Local vendor tables and artwork set up inside the venue",
+    caption: "Local vendor tables",
+    ...raeCredit,
+  },
+  {
+    src: "/gallery/coh-250726-IMG_2229-34-rae.jpg",
+    alt: "Stage setup with guitars, drums, and an All For Art sign in the foreground",
+    caption: "Stage setup and guitars",
+    ...raeCredit,
+  },
 ];
 
 const Watch = () => {
