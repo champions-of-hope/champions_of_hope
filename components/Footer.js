@@ -22,7 +22,7 @@ export default function Footer() {
             <h3 className="text-xl font-semibold">Explore</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors duration-300">
+                <Link href="/#about" className="text-gray-300 hover:text-white transition-colors duration-300">
                   About
                 </Link>
               </li>
