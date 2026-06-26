@@ -251,10 +251,10 @@ export default function AboutSection() {
               Now building FieldProof
             </p>
             <h2 className="text-4xl font-black uppercase leading-tight sm:text-5xl">
-              Not staffing. Not raw leads. Better signal before your team spends time.
+              We&apos;re not staffing, and we&apos;re not a lead list.
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-700">
-              We manually screen candidates before they reach hiring or intake teams, including work eligibility, transportation, trade interest, hands-on experience, timeline, wage expectations, responsiveness, and readiness.
+              Before anyone reaches your hiring team, we check the basics by phone: work eligibility, transportation, real experience, when they can start, and whether they actually want the trade.
             </p>
           </div>
 
@@ -293,7 +293,7 @@ export default function AboutSection() {
             <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-[#3D7AD5]">
               What FieldProof is not
             </p>
-            <h2 className="text-3xl font-black uppercase">Clear boundaries build trust.</h2>
+            <h2 className="text-3xl font-black uppercase">What we don&apos;t do.</h2>
             <div className="mt-6 grid gap-3">
               {notFieldProof.map((item) => (
                 <div key={item} className="rounded-xl border border-white/10 bg-black/30 p-4 font-semibold">
@@ -431,10 +431,10 @@ export default function AboutSection() {
               Support the next show
             </p>
             <h3 className="mx-auto mt-3 max-w-3xl text-3xl font-black uppercase leading-tight sm:text-4xl">
-              Help underwrite a future Champions of Hope event.
+              Sponsor a future Champions of Hope show.
             </h3>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-gray-300">
-              Sponsors help cover fixed show costs so local artists can be paid, the cause still gets its share, and the night feels real in the room.
+              Your sponsorship covers the fixed costs of the night, so the artists still get paid and the charity still gets its cut. You put your name on a room full of people who showed up for a local cause.
             </p>
             <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
               <Link

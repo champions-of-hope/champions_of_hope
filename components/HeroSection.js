@@ -62,10 +62,10 @@ const HeroSection = () => {
               Champions of Hope / FieldProof
             </p>
             <h1 className="text-4xl font-black uppercase leading-tight tracking-tight md:text-6xl lg:text-7xl">
-              Community trust, now pointed at trades readiness.
+              We built trust running shows. Now we&apos;re using it to fix trades hiring.
             </h1>
             <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-gray-200 md:text-xl">
-              Champions of Hope started through live events, local artists, sponsors, and community fundraising in Vancouver. We are now building FieldProof: a trades candidate-readiness filter that helps BC contractors and workforce partners waste less time on unready applicants.
+              Champions of Hope started in Vancouver with live music, local artists, and sponsored fundraisers. That work put us in the same room as the trades. FieldProof is what we&apos;re building next: we screen trades applicants for BC contractors so your team stops burning hours on people who were never going to show.
             </p>
             <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row md:mt-9 md:gap-4">
               <Link

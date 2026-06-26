@@ -48,10 +48,10 @@ export default function FieldProofPage() {
               FieldProof by Champions of Hope
             </p>
             <h1 className="max-w-4xl text-5xl font-black uppercase leading-[0.95] tracking-tight md:text-7xl">
-              Trades candidates screened before your team spends time.
+              We screen trades candidates so you stop interviewing people who were never ready.
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-200 md:text-xl">
-              FieldProof helps BC contractors, trade schools, and workforce partners reduce hiring waste by manually validating candidates before they reach hiring or intake teams.
+              FieldProof is a hands-on screening service in BC. We call and vet trades applicants on the basics: work eligibility, transportation, real site experience, and when they can actually start. You only see the ones worth a conversation.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a
@@ -76,18 +76,18 @@ export default function FieldProofPage() {
               <p className="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-[#3D7AD5]">
                 What it is
               </p>
-              <h2 className="text-3xl font-black uppercase">A front-end readiness filter.</h2>
+              <h2 className="text-3xl font-black uppercase">We make the calls before you waste an interview.</h2>
               <p className="mt-5 leading-8 text-gray-200">
-                FieldProof is not a staffing agency and does not send raw lead lists. We screen candidates for the signals that usually waste time before interviews, intakes, or pathway conversations even begin.
+                FieldProof is not a staffing agency, and we don&apos;t sell lead lists. We call each applicant and check the things that usually blow up an interview before it happens: are they eligible to work, can they get to the site, do they have real experience, and can they start when you need them.
               </p>
             </div>
             <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
               <p className="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-[#FFB632]">
                 The problem
               </p>
-              <h2 className="text-3xl font-black uppercase">Interest is not readiness.</h2>
+              <h2 className="text-3xl font-black uppercase">Wanting the job isn&apos;t being ready for it.</h2>
               <p className="mt-5 leading-8 text-gray-200">
-                A candidate can say they want the trades and still be unreachable, unprepared, unrealistic, not eligible, or not worth your team&apos;s time yet. FieldProof is built to separate casual interest from usable candidate signal.
+                Plenty of applicants say they want into the trades and then don&apos;t pick up the phone, can&apos;t get to the site, or expect journeyman pay on day one. We sort the ones who are actually ready from the ones who just filled out a form.
               </p>
             </div>
           </div>
@@ -173,19 +173,19 @@ export default function FieldProofPage() {
             <p className="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-[#FFB632]">
               What partners receive
             </p>
-            <h2 className="text-4xl font-black uppercase md:text-5xl">Short profiles, clear caveats, better signal.</h2>
+            <h2 className="text-4xl font-black uppercase md:text-5xl">Short profiles you can read in thirty seconds.</h2>
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               <div className="rounded-2xl bg-black/30 p-6">
                 <h3 className="text-xl font-black uppercase">Fit-check profiles</h3>
-                <p className="mt-3 text-gray-300">A short candidate summary built for quick review, not a raw spreadsheet.</p>
+                <p className="mt-3 text-gray-300">A quick summary on each candidate, built for a 30-second read, not a spreadsheet you have to decode.</p>
               </div>
               <div className="rounded-2xl bg-black/30 p-6">
                 <h3 className="text-xl font-black uppercase">Screening notes</h3>
-                <p className="mt-3 text-gray-300">Confirmed basics, risk notes, trade lane, and what still needs to be verified.</p>
+                <p className="mt-3 text-gray-300">What we confirmed, what we&apos;re still unsure about, and which trade they&apos;re aimed at.</p>
               </div>
               <div className="rounded-2xl bg-black/30 p-6">
-                <h3 className="text-xl font-black uppercase">Buyer feedback loop</h3>
-                <p className="mt-3 text-gray-300">The filter improves when partners tell us what would be worth an interview.</p>
+                <h3 className="text-xl font-black uppercase">Your feedback sharpens it</h3>
+                <p className="mt-3 text-gray-300">Tell us who was worth your time and who wasn&apos;t, and the next batch comes back sharper.</p>
               </div>
             </div>
           </div>
