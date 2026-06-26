@@ -55,7 +55,7 @@ export default function Jars() {
           <div className="text-white">
             <h2 className="text-3xl font-bold mb-4">The Band Behind the Mission</h2>
             <p className="text-lg leading-relaxed">
-              JARS is a collaborative project based in Vancouver, BC, consisting of Jimmy (Frontman/Rhythm guitarist), Shamus (Bass,) Rayne (Drums) and Caleb (Lead Guitar).  We curate music using the vast array of tastes from each member. We like to call ourselves a Shoegaze Folk band, but we leave our music up for the audience to decide. Our music is guided by the principles of playfulness, experimentation with roots in traditional folk music. But don't trust us, listen for yourself!
+              JARS is a collaborative project based in Vancouver, BC, consisting of Jimmy (Frontman/Rhythm guitarist), Shamus (Bass,) Rayne (Drums) and Caleb (Lead Guitar).  We curate music using the vast array of tastes from each member. We like to call ourselves a Shoegaze Folk band, but we leave our music up for the audience to decide. Our music is guided by the principles of playfulness, experimentation with roots in traditional folk music. But don&#39;t trust us, listen for yourself!
             </p>
             {/* Socials */}
             <ul className="flex justify-center space-x-4 mt-4">

@@ -127,7 +127,7 @@ const DiscographySection = () => {
             <div className="block-teaser">
               <h2 className="text-2xl md:text-3xl font-bold mb-0">
                 PRE-ORDER THE NEW ALBUM AND GET ACCESS TO
-                <br /> THE PRE-SALE OF 'THE UPCOMING TOUR'
+                <br /> THE PRE-SALE OF &#39;THE UPCOMING TOUR&#39;
               </h2>
               <Link
                 href="#"
