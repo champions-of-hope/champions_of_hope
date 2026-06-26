@@ -66,6 +66,11 @@ const showProofImages = [
     alt: "Crowd gathered at Champions of Hope 10",
     caption: "People in the room",
   },
+  {
+    src: "/gallery/coh-2025-11-14-packed-room-band-performance-rae.jpg",
+    alt: "Packed room watching a band at a Champions of Hope show",
+    caption: "Packed room",
+  },
 ];
 
 const showTestimonials = [
