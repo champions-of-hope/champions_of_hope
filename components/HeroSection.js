@@ -56,7 +56,7 @@ const HeroSection = () => {
           </div>
         ))}
 
-        <div className="absolute inset-0 z-20 flex items-center justify-center px-6 pb-28 pt-28 md:pb-32 md:pt-24">
+        <div className="absolute inset-0 z-20 flex items-center justify-center px-6 pb-28 pt-32 md:pb-28 md:pt-36">
           <div className="mx-auto max-w-6xl text-center text-white">
             <p className="mb-4 text-sm font-bold uppercase tracking-[0.35em] text-[#FFB632]">
               Champions of Hope / FieldProof
