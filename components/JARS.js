@@ -72,7 +72,7 @@ const JARS = () => {
                   <li>Jimmy Ortiz(Front Man)</li>
                   <li>Rayne Wood (Drums)</li>
                   <li>Shamus(Base)</li>
-                  <li>Caleb O'Brien(Lead Guitar)</li>
+                  <li>Caleb O&#39;Brien(Lead Guitar)</li>
                 </ul>
               </div>
               <ul className="flex space-x-4 mt-4">
