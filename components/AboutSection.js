@@ -486,7 +486,7 @@ export default function AboutSection() {
             </p>
             <a
               href="mailto:jimmy.ortiz@championsofhopeseries.com"
-              className="mt-4 inline-block text-xl font-bold text-[#1E1B1B] underline decoration-[#FFB632] decoration-2 underline-offset-4 transition hover:opacity-70 sm:text-2xl"
+              className="mt-4 inline-block break-all text-base font-bold text-[#1E1B1B] underline decoration-[#FFB632] decoration-2 underline-offset-4 transition hover:opacity-70 sm:text-xl md:text-2xl"
             >
               jimmy.ortiz@championsofhopeseries.com
             </a>

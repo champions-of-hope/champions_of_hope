@@ -23,6 +23,13 @@ const HeroSection = () => {
   const [activeSlide, setActiveSlide] = useState(0);
 
   useEffect(() => {
+    // Don't auto-advance the slideshow for visitors who prefer reduced motion.
+    if (
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      return;
+    }
     const interval = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % heroSlides.length);
     }, 5000);
@@ -85,13 +92,13 @@ const HeroSection = () => {
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                   <Link
                     href="/fieldproof"
-                    className="rounded-full bg-[#FFB632] px-6 py-3 text-center font-bold text-black transition hover:bg-white sm:flex-1"
+                    className="rounded-full bg-[#FFB632] px-6 py-3 text-center font-bold text-black transition hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black sm:flex-1"
                   >
                     I&apos;m hiring
                   </Link>
                   <Link
                     href="/get-verified"
-                    className="rounded-full border border-white/40 px-6 py-3 text-center font-bold text-white transition hover:border-white hover:bg-white/10 sm:flex-1"
+                    className="rounded-full border border-white/40 px-6 py-3 text-center font-bold text-white transition hover:border-white hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black sm:flex-1"
                   >
                     I&apos;m a tradesperson
                   </Link>
@@ -112,13 +119,13 @@ const HeroSection = () => {
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                   <Link
                     href="/#events"
-                    className="rounded-full bg-[#3D7AD5] px-6 py-3 text-center font-bold text-white transition hover:bg-white hover:text-black sm:flex-1"
+                    className="rounded-full bg-[#3D7AD5] px-6 py-3 text-center font-bold text-white transition hover:bg-white hover:text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black sm:flex-1"
                   >
                     See the events
                   </Link>
                   <Link
                     href="/watch"
-                    className="rounded-full border border-white/40 px-6 py-3 text-center font-bold text-white transition hover:border-white hover:bg-white/10 sm:flex-1"
+                    className="rounded-full border border-white/40 px-6 py-3 text-center font-bold text-white transition hover:border-white hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black sm:flex-1"
                   >
                     View the gallery
                   </Link>
