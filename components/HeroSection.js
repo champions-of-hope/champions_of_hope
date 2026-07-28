@@ -31,7 +31,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen">
-      <div className="relative h-[100svh] min-h-[760px] w-full overflow-hidden md:h-screen md:min-h-0">
+      <div className="relative min-h-[100svh] w-full overflow-hidden">
         {heroSlides.map((slide, index) => (
           <div
             key={slide.src}
@@ -43,7 +43,7 @@ const HeroSection = () => {
               className="w-full h-full bg-cover bg-center bg-no-repeat relative"
               style={{ backgroundImage: `url('${slide.src}')` }}
             >
-              <div className="absolute inset-0 bg-black/70"></div>
+              <div className="absolute inset-0 bg-black/75"></div>
               <Image
                 src={slide.src}
                 alt={slide.alt}
@@ -56,36 +56,74 @@ const HeroSection = () => {
           </div>
         ))}
 
-        <div className="absolute inset-0 z-20 flex items-center justify-center px-6 pb-28 pt-32 md:pb-28 md:pt-36">
-          <div className="mx-auto max-w-6xl text-center text-white">
-            <p className="mb-4 text-sm font-bold uppercase tracking-[0.35em] text-[#FFB632]">
-              Champions of Hope / FieldProof
-            </p>
-            <h1 className="text-4xl font-black uppercase leading-tight tracking-tight md:text-6xl lg:text-7xl">
-              We built trust running shows. Now we&apos;re using it to fix trades hiring.
-            </h1>
-            <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-gray-200 md:text-xl">
-              Champions of Hope started in Vancouver with live music, local artists, and sponsored fundraisers. That work put us in the same room as the trades. FieldProof is what we&apos;re building next: we screen trades applicants for BC contractors so your team stops burning hours on people who were never going to show.
-            </p>
-            <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row md:mt-9 md:gap-4">
-              <Link
-                href="/fieldproof"
-                className="w-full max-w-xs rounded-full bg-[#FFB632] px-7 py-4 text-center font-bold text-black transition hover:bg-white sm:w-auto"
-              >
-                Review FieldProof
-              </Link>
-              <a
-                href="mailto:jimmy.ortiz@championsofhope.io?subject=FieldProof%20fit-check%20profile"
-                className="w-full max-w-xs rounded-full border border-white/40 px-7 py-4 text-center font-bold text-white transition hover:border-white hover:bg-white/10 sm:w-auto"
-              >
-                Request a Fit-Check Profile
-              </a>
-              <Link
-                href="/#impact"
-                className="w-full max-w-xs rounded-full bg-[#3D7AD5] px-7 py-4 text-center font-bold text-white transition hover:bg-white hover:text-black sm:w-auto"
-              >
-                Explore Events
-              </Link>
+        <div className="absolute inset-0 z-20 flex items-center justify-center px-6 pb-24 pt-28 md:pt-32">
+          <div className="mx-auto w-full max-w-6xl text-white">
+            <div className="text-center">
+              <p className="text-sm font-bold uppercase tracking-[0.35em] text-[#FFB632]">
+                Champions of Hope
+              </p>
+              <h1 className="mt-4 text-4xl font-black uppercase leading-tight tracking-tight md:text-6xl lg:text-7xl">
+                One name. Two things.
+              </h1>
+              <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-gray-200 md:text-lg">
+                We run benefit music shows for local artists and causes in Vancouver. We also run FieldProof, the licensed trades-hiring arm those shows built. Pick the door that is yours.
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-5 md:grid-cols-2">
+              {/* FieldProof door — first in the DOM so it stacks on top on mobile */}
+              <div className="flex flex-col rounded-3xl border border-[#FFB632]/40 bg-black/50 p-7 backdrop-blur-sm md:p-8">
+                <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#FFB632]">
+                  FieldProof / Trades hiring
+                </p>
+                <h2 className="mt-3 text-2xl font-black uppercase leading-tight md:text-3xl">
+                  Hiring or working the trades.
+                </h2>
+                <p className="mt-3 flex-1 text-base leading-7 text-gray-200">
+                  Verified trades hiring across Metro Vancouver and the Fraser Valley.
+                </p>
+                <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                  <Link
+                    href="/fieldproof"
+                    className="rounded-full bg-[#FFB632] px-6 py-3 text-center font-bold text-black transition hover:bg-white sm:flex-1"
+                  >
+                    I&apos;m hiring
+                  </Link>
+                  <Link
+                    href="/get-verified"
+                    className="rounded-full border border-white/40 px-6 py-3 text-center font-bold text-white transition hover:border-white hover:bg-white/10 sm:flex-1"
+                  >
+                    I&apos;m a tradesperson
+                  </Link>
+                </div>
+              </div>
+
+              {/* Champions of Hope door */}
+              <div className="flex flex-col rounded-3xl border border-[#3D7AD5]/40 bg-black/50 p-7 backdrop-blur-sm md:p-8">
+                <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#6ea3f0]">
+                  Champions of Hope / Live music
+                </p>
+                <h2 className="mt-3 text-2xl font-black uppercase leading-tight md:text-3xl">
+                  Shows, artists and causes.
+                </h2>
+                <p className="mt-3 flex-1 text-base leading-7 text-gray-200">
+                  Live music, local artists, and money raised for local causes.
+                </p>
+                <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                  <Link
+                    href="/#events"
+                    className="rounded-full bg-[#3D7AD5] px-6 py-3 text-center font-bold text-white transition hover:bg-white hover:text-black sm:flex-1"
+                  >
+                    See the events
+                  </Link>
+                  <Link
+                    href="/watch"
+                    className="rounded-full border border-white/40 px-6 py-3 text-center font-bold text-white transition hover:border-white hover:bg-white/10 sm:flex-1"
+                  >
+                    View the gallery
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
