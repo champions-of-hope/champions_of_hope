@@ -90,7 +90,7 @@ export function GET() {
                 lineHeight: 1.25,
               }}
             >
-              Live events, local artists, community impact, and FieldProof candidate readiness.
+              A Vancouver benefit-music series, and FieldProof, its licensed trades-hiring arm.
             </div>
           </div>
         </div>

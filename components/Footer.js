@@ -37,7 +37,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="mailto:jimmy.ortiz@championsofhope.io" className="text-gray-300 hover:text-white transition-colors duration-300">
+                <Link href="mailto:jimmy.ortiz@championsofhopeseries.com" className="text-gray-300 hover:text-white transition-colors duration-300">
                   Contact
                 </Link>
               </li>
@@ -51,14 +51,14 @@ export default function Footer() {
               <a href="https://www.linkedin.com/company/106714301" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300">
                 <FaLinkedin size={24} />
               </a>
-              <a href=" https://www.tiktok.com/@champions.of.hope.series" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300">
+              <a href="https://www.tiktok.com/@champions.of.hope.series" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300">
                 <FaTiktok size={24} />
               </a>
               
-              <a href=" https://www.facebook.com/profile.php?id=61577283400098&sk=about" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300">
+              <a href="https://www.facebook.com/profile.php?id=61577283400098&sk=about" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300">
                 <FaFacebook size={24} />
               </a>
-              <a href=" https://www.youtube.com/@champions.of.hope.series" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300">
+              <a href="https://www.youtube.com/@champions.of.hope.series" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300">
                 <FaYoutube size={24} />
               </a>
               <a href="https://www.instagram.com/champions.of.hope/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300">

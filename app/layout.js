@@ -5,10 +5,15 @@ import ScrollAnimations from "@/components/ScrollAnimations";
 
 const siteUrl = "https://championsofhope.io";
 const socialImage = `${siteUrl}/og-image.png?v=1`;
+const siteDescription =
+  "Champions of Hope is a Vancouver benefit-music series for local artists and causes. FieldProof, its trades-hiring arm, is a licensed BC employment agency that places verified journeymen with contractors.";
 
 export const metadata = {
-  title: "Champions of Hope",
-  description: "Live events, local artists, community impact, and FieldProof candidate readiness.",
+  title: {
+    default: "Champions of Hope",
+    template: "%s · Champions of Hope",
+  },
+  description: siteDescription,
   metadataBase: new URL(siteUrl),
   manifest: "/manifest.json?v=3",
   themeColor: "#1E1B1B",
@@ -27,7 +32,7 @@ export const metadata = {
   },
   openGraph: {
     title: "Champions of Hope",
-    description: "Live events, local artists, community impact, and FieldProof candidate readiness.",
+    description: siteDescription,
     url: siteUrl,
     siteName: "Champions of Hope",
     type: "website",
@@ -43,7 +48,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Champions of Hope",
-    description: "Live events, local artists, community impact, and FieldProof candidate readiness.",
+    description: siteDescription,
     images: [socialImage],
   },
 };

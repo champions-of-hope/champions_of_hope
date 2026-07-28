@@ -6,17 +6,13 @@ import { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import MailingListPopup from "@/components/MailingListPopup";
 
-// Remembers (in the visitor's browser) that the first-visit popup has been shown,
-// so returning visitors aren't nagged every time.
-const POPUP_SEEN_KEY = "coh_newsletter_popup_seen";
-
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/fieldproof", label: "FieldProof", featured: true },
-  { href: "/#impact", label: "Events" },
+  { href: "/#events", label: "Events" },
   { href: "/#about", label: "About" },
   { href: "/watch", label: "Gallery" },
-  { href: "mailto:jimmy.ortiz@championsofhope.io", label: "Contact", external: true },
+  { href: "mailto:jimmy.ortiz@championsofhopeseries.com", label: "Contact", external: true },
 ];
 
 const Navbar = () => {
@@ -31,18 +27,6 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Auto-open the signup popup once on a visitor's first visit.
-  useEffect(() => {
-    try {
-      if (!localStorage.getItem(POPUP_SEEN_KEY)) {
-        setIsPopupOpen(true);
-        localStorage.setItem(POPUP_SEEN_KEY, "1");
-      }
-    } catch {
-      // localStorage may be unavailable (private mode) — skip auto-open.
-    }
   }, []);
 
   const toggleMobileMenu = () => {
