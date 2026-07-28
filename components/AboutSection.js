@@ -10,32 +10,15 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 
-const proofStats = [
-  { value: "170", label: "candidate records" },
-  { value: "95", label: "manually validated candidates" },
-  { value: "93", label: "validation calls completed" },
-  { value: "16", label: "fit-check-ready profiles" },
-  { value: "$542.44", label: "rough paid traffic test" },
-];
-
-const partnerTypes = [
-  "Mechanical contractors",
-  "Electrical contractors",
-  "Plumbing and pipe trades contractors",
-  "Fire protection / sprinkler contractors",
-  "General contractors",
-  "Trade schools",
-  "Workforce partners",
-  "Union intake teams",
-];
-
+// True statements about FieldProof. Every line here has to survive a buyer or a
+// regulator reading it. No price, no guarantee, no verification steps on the
+// homepage — all of that lives on /fieldproof.
 const notFieldProof = [
-  "Not a staffing agency",
-  "Not a temp agency",
-  "Not a raw lead vendor",
-  "Not a job guarantee",
-  "Not a replacement for internal hiring teams",
-  "Not a promise of union intake, school admission, or employment",
+  "We do not guarantee a job, a placement, an interview, union intake, school admission, or apprenticeship sponsorship.",
+  "We are not a temp agency and not a raw lead list. Placements are direct-hire.",
+  "We do not replace your internal hiring team.",
+  "A tradesperson never pays, at any stage.",
+  "We recruit Canadian citizens and permanent residents only. This is a condition of our employment agency licence.",
 ];
 
 const lifetimeImpact = [
@@ -124,25 +107,6 @@ const showTestimonials = [
   },
 ];
 
-const aboutImages = [
-  {
-    src: "/assets/AboutSection/squared1.jpg",
-    alt: "Artist performing at a Champions of Hope show",
-  },
-  {
-    src: "/assets/AboutSection/squared2.jpg",
-    alt: "Crowd and community at a Champions of Hope event",
-  },
-  {
-    src: "/assets/AboutSection/squared3.jpg",
-    alt: "Band performing at a Champions of Hope show",
-  },
-  {
-    src: "/gallery/coh-10-crowd-hand.jpg",
-    alt: "Crowd raising a hand at a Champions of Hope show",
-  },
-];
-
 const eventApplications = [
   {
     title: "Band / Artist Application",
@@ -164,6 +128,21 @@ const eventApplications = [
     href: "https://forms.gle/oet8PHWEm2Hcixkr8",
     buttonLabel: "Sponsorship Inquiry",
     buttonClass: "bg-[#FFB632] text-black hover:bg-white",
+  },
+];
+
+const contactLanes = [
+  {
+    audience: "Contractors and hiring",
+    number: "778-652-3018",
+    tel: "tel:+17786523018",
+    accent: "text-[#FFB632]",
+  },
+  {
+    audience: "Tradespeople and candidate intake",
+    number: "778-907-9151",
+    tel: "tel:+17789079151",
+    accent: "text-[#6ea3f0]",
   },
 ];
 
@@ -198,171 +177,90 @@ export default function AboutSection() {
 
   return (
     <>
+      {/* FieldProof, stated plainly. The homepage door is thin on purpose; the
+          selling happens on /fieldproof. What lives here is only what has to be
+          true in public. */}
       <section id="about" className="scroll-mt-28 bg-[#1E1B1B] px-6 py-20 text-white sm:px-12">
-        <div className="container mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="grid grid-cols-2 gap-4">
-            {aboutImages.map((image) => (
-              <div
-                key={image.src}
-                className="relative group overflow-hidden rounded-2xl shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-2xl"
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  width={400}
-                  height={400}
-                  className="h-48 w-full object-cover transition-transform duration-700 group-hover:scale-110 sm:h-64 lg:h-72"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
-              </div>
-            ))}
-          </div>
-
-          <div className="space-y-6 rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl backdrop-blur-md lg:p-10">
-            <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#FFB632]">
-              What Champions of Hope is becoming
-            </p>
-            <h2 className="text-4xl font-black uppercase leading-tight sm:text-5xl">
-              We started with shows. Now we are building a trades-readiness filter.
-            </h2>
-            <p className="text-lg leading-8 text-gray-200">
-              Champions of Hope started through live events, local artists, sponsors, and community fundraising in Vancouver. That story still matters. It proves we can build trust, get people to show up, and turn attention into action.
-            </p>
-            <p className="text-lg leading-8 text-gray-200">
-              FieldProof is the next layer: a candidate-readiness filter for trades employers and workforce partners. We help teams waste less time on unready candidates by manually validating people before they reach hiring or intake teams.
-            </p>
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <Link
-                href="/fieldproof"
-                className="rounded-full bg-[#FFB632] px-6 py-3 text-center font-bold text-black transition hover:bg-white"
-              >
-                Learn About FieldProof
-              </Link>
-              <a
-                href="mailto:jimmy.ortiz@championsofhope.io?subject=FieldProof%20fit-check%20profile"
-                className="rounded-full border border-white/30 px-6 py-3 text-center font-bold text-white transition hover:bg-white/10"
-              >
-                Request a Fit-Check Profile
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-white px-6 py-20 text-[#1E1B1B] sm:px-12">
         <div className="container mx-auto max-w-6xl">
           <div className="max-w-3xl">
-            <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-[#3D7AD5]">
-              Now building FieldProof
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-[#FFB632]">
+              FieldProof, in plain terms
             </p>
             <h2 className="text-4xl font-black uppercase leading-tight sm:text-5xl">
-              We&apos;re not staffing, and we&apos;re not a lead list.
+              The trades arm of Champions of Hope.
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-700">
-              Before anyone reaches your hiring team, we check the basics by phone: work eligibility, transportation, real experience, when they can start, and whether they actually want the trade.
+            <p className="mt-6 text-lg leading-8 text-gray-200">
+              FieldProof is a licensed BC employment agency. We verify ticketed journeymen and place them with open-shop contractors across Metro Vancouver and the Fraser Valley. The full detail lives on the FieldProof page. What is on this page is only what has to be true everywhere.
             </p>
           </div>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            {proofStats.map((stat) => (
-              <div key={stat.label} className="rounded-3xl border border-black/10 bg-[#F6F6F6] p-6">
-                <p className="text-4xl font-black text-[#1E1B1B]">{stat.value}</p>
-                <p className="mt-2 font-semibold text-gray-700">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-
-          <p className="mt-6 max-w-3xl text-sm leading-7 text-gray-600">
-            These are early numbers, not final proof. The next proof layer is buyer feedback, interviews, starts, and retention.
-          </p>
-        </div>
-      </section>
-
-      <section className="bg-[#0f0f0f] px-6 py-20 text-white sm:px-12">
-        <div className="container mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
-            <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-[#FFB632]">
-              Who this helps
-            </p>
-            <h2 className="text-3xl font-black uppercase">Built for teams that need cleaner candidate signal.</h2>
-            <div className="mt-6 grid gap-3 sm:grid-cols-2">
-              {partnerTypes.map((type) => (
-                <div key={type} className="rounded-xl border border-white/10 bg-black/30 p-4 font-semibold">
-                  {type}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
-            <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-[#3D7AD5]">
+          <div className="mt-10 rounded-3xl border border-white/10 bg-white/[0.04] p-8 lg:p-10">
+            <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#3D7AD5]">
               What FieldProof is not
             </p>
-            <h2 className="text-3xl font-black uppercase">What we don&apos;t do.</h2>
-            <div className="mt-6 grid gap-3">
+            <ul className="mt-6 grid gap-3">
               {notFieldProof.map((item) => (
-                <div key={item} className="rounded-xl border border-white/10 bg-black/30 p-4 font-semibold">
+                <li
+                  key={item}
+                  className="rounded-xl border border-white/10 bg-black/30 p-4 text-base font-semibold leading-7 text-gray-100"
+                >
                   {item}
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
-        </div>
-      </section>
 
-      <section className="bg-[#FFB632] px-6 py-16 text-black sm:px-12">
-        <div className="container mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-          <div>
-            <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em]">
-              Two paths. One brand.
-            </p>
-            <h2 className="text-4xl font-black uppercase leading-tight sm:text-5xl">
-              Employers go to FieldProof. Artists and community go to events.
-            </h2>
-          </div>
-          <div className="grid gap-4">
-            <Link href="/fieldproof" className="rounded-2xl bg-black p-6 font-bold text-white transition hover:bg-white hover:text-black">
-              For Employers / Workforce Partners → FieldProof
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Link
+              href="/fieldproof"
+              className="rounded-full bg-[#FFB632] px-7 py-4 text-center font-bold text-black transition hover:bg-white"
+            >
+              See how FieldProof works
             </Link>
-            <Link href="/#impact" className="rounded-2xl border border-black p-6 font-bold transition hover:bg-black hover:text-white">
-              For Artists / Community / Shows → Champions of Hope Events
+            <Link
+              href="/get-verified"
+              className="rounded-full border border-white/30 px-7 py-4 text-center font-bold text-white transition hover:bg-white/10"
+            >
+              Get verified
             </Link>
           </div>
         </div>
       </section>
 
-      <section id="impact" className="scroll-mt-28 bg-[#141414] px-6 py-16 text-white sm:px-12">
+      {/* Lifetime impact — Champions of Hope shared proof, given the most weight
+          on the page. Hover / tap reveals each figure. */}
+      <section id="impact" className="scroll-mt-28 bg-[#141414] px-6 py-24 text-white sm:px-12">
         <div className="container mx-auto max-w-6xl">
-          <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl">
               <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-[#FFB632]">
                 Lifetime Champions of Hope impact
               </p>
-              <h2 className="text-3xl font-black uppercase leading-tight sm:text-4xl">
-                Built on real shows, real sponsors, and real money moved back into the community.
+              <h2 className="text-4xl font-black uppercase leading-tight sm:text-5xl">
+                Real shows, real sponsors, real money moved back into the community.
               </h2>
             </div>
-            <p className="max-w-sm text-center text-sm leading-6 text-gray-400 lg:mx-0">
+            <p className="max-w-sm text-sm leading-6 text-gray-400">
               Hover over a card to reveal the number. On mobile, tap once.
             </p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {lifetimeImpact.map((item) => (
               <button
                 key={item.label}
                 type="button"
-                className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-6 text-left transition hover:border-[#FFB632]/70 hover:bg-white/[0.07] focus:border-[#FFB632] focus:outline-none focus:ring-2 focus:ring-[#FFB632]/60"
+                className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-8 text-left transition hover:border-[#FFB632]/70 hover:bg-white/[0.07] focus:border-[#FFB632] focus:outline-none focus:ring-2 focus:ring-[#FFB632]/60"
               >
                 <p className="relative z-10 text-sm font-bold uppercase tracking-[0.2em] text-gray-400">
                   {item.label}
                 </p>
-                <div className="relative mt-5 inline-block">
-                  <p className="relative z-10 select-none text-3xl font-black text-[#FFB632] opacity-15 blur-[7px] transition duration-300 group-hover:opacity-100 group-hover:blur-0 group-focus:opacity-100 group-focus:blur-0 group-active:opacity-100 group-active:blur-0 sm:text-4xl">
+                <div className="relative mt-6 inline-block">
+                  <p className="relative z-10 select-none text-4xl font-black text-[#FFB632] opacity-15 blur-[7px] transition duration-300 group-hover:opacity-100 group-hover:blur-0 group-focus:opacity-100 group-focus:blur-0 group-active:opacity-100 group-active:blur-0 sm:text-5xl">
                     {item.value}
                   </p>
                 </div>
-                <p className="relative z-10 mt-3 text-xs font-semibold uppercase tracking-[0.18em] text-gray-500 group-hover:text-gray-300 group-focus:text-gray-300">
+                <p className="relative z-10 mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-gray-500 group-hover:text-gray-300 group-focus:text-gray-300">
                   Reveal impact
                 </p>
               </button>
@@ -371,6 +269,8 @@ export default function AboutSection() {
         </div>
       </section>
 
+      {/* Show proof and testimonials — quotes and attributions are verbatim and
+          must not change. */}
       <section id="show-proof" className="scroll-mt-28 bg-[#1E1B1B] px-6 py-20 text-white sm:px-12">
         <div className="container mx-auto max-w-6xl">
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
@@ -442,18 +342,22 @@ export default function AboutSection() {
               Your sponsorship covers the fixed costs of the night, so the artists still get paid and the charity still gets its cut. You put your name on a room full of people who showed up for a local cause.
             </p>
             <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
-              <Link
+              <a
                 href="https://forms.gle/oet8PHWEm2Hcixkr8"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full bg-[#FFB632] px-7 py-4 text-center font-bold text-black transition hover:bg-white"
               >
                 Sponsorship Inquiry
-              </Link>
-              <Link
+              </a>
+              <a
                 href="https://forms.gle/95vM7RY89dMAGERT6"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full bg-[#3D7AD5] px-7 py-4 text-center font-bold text-white transition hover:bg-white hover:text-black"
               >
                 Apply as Band / Artist
-              </Link>
+              </a>
               <Link
                 href="/watch"
                 className="rounded-full border border-white/30 px-7 py-4 text-center font-bold text-white transition hover:bg-white/10"
@@ -465,22 +369,25 @@ export default function AboutSection() {
         </div>
       </section>
 
+      {/* Events, community and applications. */}
       <section id="events" className="scroll-mt-28 bg-[#1E1B1B] px-6 py-20 text-white sm:px-12">
         <div className="container mx-auto max-w-6xl text-center">
           <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-[#FFB632]">
-            Events and community origin
+            Events and community
           </p>
           <h2 className="text-4xl font-black uppercase sm:text-5xl">The shows still matter.</h2>
           <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-gray-200">
-            We are still doing shows. We are still supporting local artists, volunteers, sponsors, and causes. FieldProof is the business direction, but we are not forgetting where Champions of Hope came from. For show updates, flyers, and community posts, check our Instagram.
+            We are still doing shows. We are still supporting local artists, volunteers, sponsors, and causes. For show updates, flyers, and community posts, check our Instagram.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link
+            <a
               href="https://www.instagram.com/champions.of.hope/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full bg-[#FFB632] px-7 py-4 font-bold text-black transition hover:bg-white"
             >
               Check Instagram for show updates
-            </Link>
+            </a>
             <Link
               href="/watch"
               className="rounded-full border border-white/30 px-7 py-4 font-bold text-white transition hover:bg-white/10"
@@ -525,13 +432,15 @@ export default function AboutSection() {
               <ul className="mt-4 flex justify-center space-x-4">
                 {musicPlatforms.map((platform) => (
                   <li key={platform.label}>
-                    <Link
+                    <a
                       href={platform.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-white transition-colors hover:text-[#FFB632]"
                       aria-label={`Open ${platform.label}`}
                     >
                       {platform.icon}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -540,23 +449,48 @@ export default function AboutSection() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-16 text-[#1E1B1B] sm:px-12">
-        <div className="container mx-auto flex max-w-6xl flex-col gap-6 rounded-3xl border border-black/10 bg-[#F6F6F6] p-8 lg:flex-row lg:items-center lg:justify-between">
-          <div>
-            <p className="mb-2 text-sm font-bold uppercase tracking-[0.3em] text-[#3D7AD5]">
-              For contractors / workforce partners
+      {/* Contact, split by audience. Two monitored lines, one email. */}
+      <section id="contact" className="scroll-mt-28 bg-white px-6 py-20 text-[#1E1B1B] sm:px-12">
+        <div className="container mx-auto max-w-6xl">
+          <div className="max-w-3xl">
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-[#3D7AD5]">
+              Contact
             </p>
-            <h2 className="text-3xl font-black uppercase">Want to review a screened candidate profile?</h2>
-            <p className="mt-3 text-lg text-gray-700">
-              Email Jimmy Ortiz: jimmy.ortiz@championsofhope.io · 778-533-8369
+            <h2 className="text-4xl font-black uppercase leading-tight sm:text-5xl">
+              Reach the right line.
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-gray-700">
+              Two numbers, split by who you are. Email reaches Jimmy Ortiz either way.
             </p>
           </div>
-          <a
-            href="mailto:jimmy.ortiz@championsofhope.io?subject=FieldProof%20fit-check%20profile"
-            className="rounded-full bg-[#3D7AD5] px-7 py-4 text-center font-bold text-white transition hover:bg-black"
-          >
-            Request a Fit-Check Profile
-          </a>
+
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            {contactLanes.map((lane) => (
+              <div key={lane.number} className="rounded-3xl border border-black/10 bg-[#F6F6F6] p-8">
+                <p className="text-sm font-bold uppercase tracking-[0.25em] text-gray-500">
+                  {lane.audience}
+                </p>
+                <a
+                  href={lane.tel}
+                  className={`mt-4 inline-block text-3xl font-black transition hover:opacity-70 ${lane.accent}`}
+                >
+                  {lane.number}
+                </a>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-6 rounded-3xl border border-black/10 bg-[#F6F6F6] p-8">
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-gray-500">
+              Email
+            </p>
+            <a
+              href="mailto:jimmy.ortiz@championsofhopeseries.com"
+              className="mt-4 inline-block break-all text-base font-bold text-[#1E1B1B] underline decoration-[#FFB632] decoration-2 underline-offset-4 transition hover:opacity-70 sm:text-xl md:text-2xl"
+            >
+              jimmy.ortiz@championsofhopeseries.com
+            </a>
+          </div>
         </div>
       </section>
     </>
