@@ -287,8 +287,8 @@ export default function AboutSection() {
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover transition duration-700 group-hover:scale-105 group-hover:opacity-90"
                   />
-                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5">
-                    <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#FFB632]">
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-3 sm:p-5">
+                    <p className="text-sm font-bold uppercase tracking-[0.08em] text-[#FFB632] sm:tracking-[0.18em]">
                       {image.caption}
                     </p>
                   </div>
@@ -436,7 +436,7 @@ export default function AboutSection() {
                       href={platform.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white transition-colors hover:text-[#FFB632]"
+                      className="inline-flex h-11 w-11 items-center justify-center text-white transition-colors hover:text-[#FFB632]"
                       aria-label={`Open ${platform.label}`}
                     >
                       {platform.icon}
@@ -472,7 +472,7 @@ export default function AboutSection() {
                 </p>
                 <a
                   href={lane.tel}
-                  className={`mt-4 inline-block text-3xl font-black transition hover:opacity-70 ${lane.accent}`}
+                  className={`mt-4 inline-flex min-h-[44px] items-center text-3xl font-black transition hover:opacity-70 ${lane.accent}`}
                 >
                   {lane.number}
                 </a>
