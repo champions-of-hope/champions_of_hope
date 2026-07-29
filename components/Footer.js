@@ -22,22 +22,22 @@ export default function Footer() {
             <h3 className="text-xl font-semibold">Explore</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/#about" className="text-gray-300 hover:text-white transition-colors duration-300">
+                <Link href="/#about" className="inline-flex min-h-[44px] items-center text-gray-300 hover:text-white transition-colors duration-300">
                   About
                 </Link>
               </li>
               {/* <li>
-                <Link href="/tour" className="text-gray-300 hover:text-white transition-colors duration-300">
+                <Link href="/tour" className="inline-flex min-h-[44px] items-center text-gray-300 hover:text-white transition-colors duration-300">
                   Tour Dates
                 </Link>
               </li> */}
               <li>
-                <Link href="/watch" className="text-gray-300 hover:text-white transition-colors duration-300">
+                <Link href="/watch" className="inline-flex min-h-[44px] items-center text-gray-300 hover:text-white transition-colors duration-300">
                   Gallery
                 </Link>
               </li>
               <li>
-                <Link href="mailto:jimmy.ortiz@championsofhopeseries.com" className="text-gray-300 hover:text-white transition-colors duration-300">
+                <Link href="mailto:jimmy.ortiz@championsofhopeseries.com" className="inline-flex min-h-[44px] items-center text-gray-300 hover:text-white transition-colors duration-300">
                   Contact
                 </Link>
               </li>
@@ -48,20 +48,20 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-xl font-semibold">Connect</h3>
             <div className="flex space-x-4">
-              <a href="https://www.linkedin.com/company/106714301" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300">
+              <a href="https://www.linkedin.com/company/106714301" target="_blank" rel="noopener noreferrer" className="inline-flex h-11 w-11 items-center justify-center text-gray-300 hover:text-white transition-colors duration-300">
                 <FaLinkedin size={24} />
               </a>
-              <a href="https://www.tiktok.com/@champions.of.hope.series" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300">
+              <a href="https://www.tiktok.com/@champions.of.hope.series" target="_blank" rel="noopener noreferrer" className="inline-flex h-11 w-11 items-center justify-center text-gray-300 hover:text-white transition-colors duration-300">
                 <FaTiktok size={24} />
               </a>
               
-              <a href="https://www.facebook.com/profile.php?id=61577283400098&sk=about" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300">
+              <a href="https://www.facebook.com/profile.php?id=61577283400098&sk=about" target="_blank" rel="noopener noreferrer" className="inline-flex h-11 w-11 items-center justify-center text-gray-300 hover:text-white transition-colors duration-300">
                 <FaFacebook size={24} />
               </a>
-              <a href="https://www.youtube.com/@champions.of.hope.series" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300">
+              <a href="https://www.youtube.com/@champions.of.hope.series" target="_blank" rel="noopener noreferrer" className="inline-flex h-11 w-11 items-center justify-center text-gray-300 hover:text-white transition-colors duration-300">
                 <FaYoutube size={24} />
               </a>
-              <a href="https://www.instagram.com/champions.of.hope/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300">
+              <a href="https://www.instagram.com/champions.of.hope/" target="_blank" rel="noopener noreferrer" className="inline-flex h-11 w-11 items-center justify-center text-gray-300 hover:text-white transition-colors duration-300">
                 <FaInstagram size={24} />
               </a>
             </div>
