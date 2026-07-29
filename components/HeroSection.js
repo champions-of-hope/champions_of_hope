@@ -37,7 +37,10 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen">
+    // No min-h-screen on the section: 100vh on iOS is the address-bar-less
+    // height, which is taller than what you can actually see and leaves a dead
+    // band under the hero. The inner box carries the 100svh floor instead.
+    <section className="relative">
       <div className="relative min-h-[100svh] w-full overflow-hidden">
         {heroSlides.map((slide, index) => (
           <div
@@ -63,7 +66,13 @@ const HeroSection = () => {
           </div>
         ))}
 
-        <div className="absolute inset-0 z-20 flex items-center justify-center px-6 pb-24 pt-28 md:pt-32">
+        {/* In flow, not absolute. As `absolute inset-0` this was locked to the
+            viewport height with overflow:hidden above it, so at 390x664 the
+            1110px of content overflowed a 664px box and was clipped on both
+            ends: the h1 sat 179px above the top of the screen and the second
+            card was cut 231px short. min-h keeps the full-bleed look when the
+            content is shorter than the screen; the box grows when it is not. */}
+        <div className="relative z-20 flex min-h-[100svh] items-center justify-center px-6 pb-12 pt-24 md:pb-24 md:pt-32">
           <div className="mx-auto w-full max-w-6xl text-white">
             <div className="text-center">
               <p className="text-sm font-bold uppercase tracking-[0.35em] text-[#FFB632]">
@@ -77,9 +86,9 @@ const HeroSection = () => {
               </p>
             </div>
 
-            <div className="mt-10 grid gap-5 md:grid-cols-2">
+            <div className="mt-8 grid gap-4 sm:gap-5 md:mt-10 md:grid-cols-2">
               {/* FieldProof door — first in the DOM so it stacks on top on mobile */}
-              <div className="flex flex-col rounded-3xl border border-[#FFB632]/40 bg-black/50 p-7 backdrop-blur-sm md:p-8">
+              <div className="flex flex-col rounded-3xl border border-[#FFB632]/40 bg-black/50 p-5 backdrop-blur-sm sm:p-7 md:p-8">
                 <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#FFB632]">
                   FieldProof / Trades hiring
                 </p>
@@ -106,7 +115,7 @@ const HeroSection = () => {
               </div>
 
               {/* Champions of Hope door */}
-              <div className="flex flex-col rounded-3xl border border-[#3D7AD5]/40 bg-black/50 p-7 backdrop-blur-sm md:p-8">
+              <div className="flex flex-col rounded-3xl border border-[#3D7AD5]/40 bg-black/50 p-5 backdrop-blur-sm sm:p-7 md:p-8">
                 <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#6ea3f0]">
                   Champions of Hope / Live music
                 </p>
