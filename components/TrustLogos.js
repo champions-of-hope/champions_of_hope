@@ -78,7 +78,7 @@ export default function TrustLogos() {
   const [featuredSponsor, ...otherSponsors] = sponsors;
 
   return (
-    <section className="bg-[#111111] px-6 py-20 text-white sm:px-12">
+    <section className="bg-[#111111] px-6 py-12 text-white sm:px-12 sm:py-20">
       <div className="container mx-auto max-w-6xl">
         <div className="mx-auto max-w-3xl text-center">
           <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-[#FFB632]">

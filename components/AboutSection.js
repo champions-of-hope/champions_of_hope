@@ -180,7 +180,7 @@ export default function AboutSection() {
       {/* FieldProof, stated plainly. The homepage door is thin on purpose; the
           selling happens on /fieldproof. What lives here is only what has to be
           true in public. */}
-      <section id="about" className="scroll-mt-28 bg-[#1E1B1B] px-6 py-20 text-white sm:px-12">
+      <section id="about" className="scroll-mt-28 bg-[#1E1B1B] px-6 py-12 text-white sm:px-12 sm:py-20">
         <div className="container mx-auto max-w-6xl">
           <div className="max-w-3xl">
             <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-[#FFB632]">
@@ -229,7 +229,7 @@ export default function AboutSection() {
 
       {/* Lifetime impact — Champions of Hope shared proof, given the most weight
           on the page. Hover / tap reveals each figure. */}
-      <section id="impact" className="scroll-mt-28 bg-[#141414] px-6 py-24 text-white sm:px-12">
+      <section id="impact" className="scroll-mt-28 bg-[#141414] px-6 py-12 text-white sm:px-12 sm:py-24">
         <div className="container mx-auto max-w-6xl">
           <div className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl">
@@ -271,7 +271,7 @@ export default function AboutSection() {
 
       {/* Show proof and testimonials — quotes and attributions are verbatim and
           must not change. */}
-      <section id="show-proof" className="scroll-mt-28 bg-[#1E1B1B] px-6 py-20 text-white sm:px-12">
+      <section id="show-proof" className="scroll-mt-28 bg-[#1E1B1B] px-6 py-12 text-white sm:px-12 sm:py-20">
         <div className="container mx-auto max-w-6xl">
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <div className="grid grid-cols-2 gap-4">
@@ -370,7 +370,7 @@ export default function AboutSection() {
       </section>
 
       {/* Events, community and applications. */}
-      <section id="events" className="scroll-mt-28 bg-[#1E1B1B] px-6 py-20 text-white sm:px-12">
+      <section id="events" className="scroll-mt-28 bg-[#1E1B1B] px-6 py-12 text-white sm:px-12 sm:py-20">
         <div className="container mx-auto max-w-6xl text-center">
           <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-[#FFB632]">
             Events and community
@@ -450,7 +450,7 @@ export default function AboutSection() {
       </section>
 
       {/* Contact, split by audience. Two monitored lines, one email. */}
-      <section id="contact" className="scroll-mt-28 bg-white px-6 py-20 text-[#1E1B1B] sm:px-12">
+      <section id="contact" className="scroll-mt-28 bg-white px-6 py-12 text-[#1E1B1B] sm:px-12 sm:py-20">
         <div className="container mx-auto max-w-6xl">
           <div className="max-w-3xl">
             <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-[#3D7AD5]">
