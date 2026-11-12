@@ -6,7 +6,7 @@ import ScrollAnimations from "@/components/ScrollAnimations";
 const siteUrl = "https://championsofhope.io";
 const socialImage = `${siteUrl}/og-image.png?v=1`;
 const siteDescription =
-  "Champions of Hope is a Vancouver benefit-music series for local artists and causes. FieldProof, its trades-hiring arm, is a licensed BC employment agency that places verified journeymen with contractors.";
+  "Champions of Hope is a Vancouver benefit-music series for local artists and causes. FieldProof, its trades-hiring arm, is a licensed BC employment agency that places verified journeypersons with contractors.";
 
 export const metadata = {
   title: {
