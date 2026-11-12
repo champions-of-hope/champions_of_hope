@@ -96,7 +96,7 @@ const HeroSection = () => {
                   Hiring or working the trades.
                 </h2>
                 <p className="mt-3 flex-1 text-base leading-7 text-gray-200">
-                  Verified trades hiring across Metro Vancouver and the Fraser Valley.
+                  Verified trades hiring across Metro Vancouver, the Fraser Valley and Vancouver Island.
                 </p>
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                   <Link

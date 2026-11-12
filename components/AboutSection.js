@@ -190,7 +190,7 @@ export default function AboutSection() {
               The trades arm of Champions of Hope.
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-200">
-              FieldProof is a licensed BC employment agency. We verify ticketed journeypersons and place them with open-shop contractors across Metro Vancouver and the Fraser Valley. The full detail lives on the FieldProof page. What is on this page is only what has to be true everywhere.
+              FieldProof is a licensed BC employment agency. We verify ticketed journeypersons and place them with open-shop contractors across Metro Vancouver, the Fraser Valley and Vancouver Island. The full detail lives on the FieldProof page. What is on this page is only what has to be true everywhere.
             </p>
           </div>
 
