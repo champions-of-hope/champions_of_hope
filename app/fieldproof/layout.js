@@ -4,7 +4,7 @@
 export const metadata = {
   title: "FieldProof: verified trades hiring",
   description:
-    "FieldProof is a licensed BC employment agency. We verify ticketed journeypersons and place them with open-shop contractors across Metro Vancouver, the Fraser Valley and Vancouver Island.",
+    "FieldProof is a licensed BC employment agency. We verify Red Seal journeypersons and registered apprentices and place them with open-shop contractors across Metro Vancouver, the Fraser Valley and Vancouver Island.",
 };
 
 export default function FieldProofLayout({ children }) {

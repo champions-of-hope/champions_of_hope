@@ -2,7 +2,7 @@
 export const metadata = {
   title: "Get verified",
   description:
-    "Get verified as a ticketed tradesperson and matched to real seats with open-shop contractors across Metro Vancouver, the Fraser Valley and Vancouver Island. You never pay.",
+    "Journeyperson or apprentice, get verified once and matched to real seats with open-shop contractors across Metro Vancouver, the Fraser Valley and Vancouver Island. You never pay.",
 };
 
 export default function GetVerifiedLayout({ children }) {

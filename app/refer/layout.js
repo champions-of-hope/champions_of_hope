@@ -2,7 +2,7 @@
 export const metadata = {
   title: "Refer a tradesperson",
   description:
-    "Refer a ticketed tradesperson to FieldProof. We call them first, and it is free to them.",
+    "Refer a journeyperson or apprentice to FieldProof. We call them first, and it is free to them.",
 };
 
 export default function ReferLayout({ children }) {
