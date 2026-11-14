@@ -10,7 +10,7 @@ const DRIVER = "(function(){ if(window.__fpWired_getVerified) return; window.__f
 
 export default function Page() {
   useEffect(() => {
-    document.title = "FieldProof — Get verified";
+    // Title comes from layout.js metadata (the search title). Don't override it here.
     const s = document.createElement("script");
     s.textContent = DRIVER;
     document.body.appendChild(s);

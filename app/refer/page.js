@@ -10,7 +10,7 @@ const DRIVER = "(function(){ if(window.__fpWired_refer) return; window.__fpWired
 
 export default function Page() {
   useEffect(() => {
-    document.title = "FieldProof — Refer a tradesperson";
+    // Title comes from layout.js metadata (the search title). Don't override it here.
     const s = document.createElement("script");
     s.textContent = DRIVER;
     document.body.appendChild(s);

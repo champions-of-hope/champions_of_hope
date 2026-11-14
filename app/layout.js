@@ -3,7 +3,9 @@
 import "./globals.css";
 import ScrollAnimations from "@/components/ScrollAnimations";
 
-const siteUrl = "https://championsofhope.io";
+// Vercel serves the site on www and 308-redirects the bare domain to it, so every
+// absolute URL (canonical, sitemap, Open Graph) must use www or Google sees redirects.
+const siteUrl = "https://www.championsofhope.io";
 const socialImage = `${siteUrl}/og-image.png?v=1`;
 const siteDescription =
   "Champions of Hope is a Vancouver benefit-music series for local artists and causes. FieldProof, its trades-hiring arm, is a licensed BC employment agency that places verified journeypersons and apprentices with contractors.";
@@ -15,6 +17,8 @@ export const metadata = {
   },
   description: siteDescription,
   metadataBase: new URL(siteUrl),
+  // Homepage canonical. Every child route's layout sets its own.
+  alternates: { canonical: "/" },
   manifest: "/manifest.json?v=3",
   themeColor: "#1E1B1B",
   icons: {
